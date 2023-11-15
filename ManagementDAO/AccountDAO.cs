@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,14 @@ namespace ManagementDAO
             using(var context = new BirdManagementContext())
             {
                 return context.Accounts.FirstOrDefault(p => p.Username.Equals(userName) && p.Password.Equals(passWord));
+            }
+        }
+
+        public List<Account> GetAlll() 
+        {
+            using(var context = new BirdManagementContext())
+            {
+                return context.Accounts.Include(a => a.Customer).ToList();
             }
         }
     }

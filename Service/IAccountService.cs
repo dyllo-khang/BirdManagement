@@ -10,5 +10,6 @@ namespace Service
     public interface IAccountService
     {
         Account GetAccount(string username, string passWord);
+        List<Account> GetAlll();
     }
 }

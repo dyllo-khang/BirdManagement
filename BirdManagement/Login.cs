@@ -43,7 +43,7 @@ namespace Bird_Farm_Shop
             {
                 if (account.Role == 1)
                 {
-                    AdministratorForm administratorForm = new AdministratorForm();
+                    AdministratorForm administratorForm = new AdministratorForm(account.Id);
                     administratorForm.Show();
                     this.Hide();
                 }

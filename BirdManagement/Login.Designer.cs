@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             picClose = new PictureBox();
             label1 = new Label();
             panel1 = new Panel();
@@ -40,6 +41,8 @@
             label3 = new Label();
             label4 = new Label();
             btnCancel = new Button();
+            label5 = new Label();
+            lblRegister = new Label();
             ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -49,6 +52,7 @@
             // picClose
             // 
             picClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            picClose.Image = (Image)resources.GetObject("picClose.Image");
             picClose.Location = new Point(915, 0);
             picClose.Name = "picClose";
             picClose.Size = new Size(30, 29);
@@ -80,6 +84,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(52, 54);
@@ -88,6 +93,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(417, 106);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(100, 100);
@@ -99,10 +105,10 @@
             // 
             txtUsername.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
             txtUsername.ForeColor = SystemColors.WindowFrame;
-            txtUsername.Location = new Point(305, 314);
+            txtUsername.Location = new Point(296, 314);
             txtUsername.Multiline = true;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(325, 34);
+            txtUsername.Size = new Size(343, 34);
             txtUsername.TabIndex = 9;
             txtUsername.Text = "sa";
             // 
@@ -110,11 +116,11 @@
             // 
             txtPassword.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
             txtPassword.ForeColor = SystemColors.WindowFrame;
-            txtPassword.Location = new Point(305, 400);
+            txtPassword.Location = new Point(296, 400);
             txtPassword.Multiline = true;
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
-            txtPassword.Size = new Size(325, 34);
+            txtPassword.Size = new Size(343, 34);
             txtPassword.TabIndex = 10;
             txtPassword.Text = "123";
             // 
@@ -124,7 +130,7 @@
             label2.Font = new Font("Century Schoolbook", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(296, 221);
             label2.Name = "label2";
-            label2.Size = new Size(529, 62);
+            label2.Size = new Size(343, 40);
             label2.TabIndex = 11;
             label2.Text = "Please Login First";
             // 
@@ -134,9 +140,9 @@
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(305, 469);
+            btnLogin.Location = new Point(296, 469);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(325, 40);
+            btnLogin.Size = new Size(343, 40);
             btnLogin.TabIndex = 12;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -144,7 +150,7 @@
             // 
             // label3
             // 
-            label3.Location = new Point(305, 287);
+            label3.Location = new Point(296, 287);
             label3.Name = "label3";
             label3.Size = new Size(112, 24);
             label3.TabIndex = 13;
@@ -152,7 +158,7 @@
             // 
             // label4
             // 
-            label4.Location = new Point(305, 373);
+            label4.Location = new Point(296, 373);
             label4.Name = "label4";
             label4.Size = new Size(112, 24);
             label4.TabIndex = 14;
@@ -164,21 +170,41 @@
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(305, 525);
+            btnCancel.Location = new Point(296, 525);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(325, 40);
+            btnCancel.Size = new Size(343, 40);
             btnCancel.TabIndex = 15;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
+            // label5
+            // 
+            label5.Location = new Point(292, 584);
+            label5.Name = "label5";
+            label5.Size = new Size(225, 24);
+            label5.TabIndex = 16;
+            label5.Text = "Don't have account ?";
+            // 
+            // lblRegister
+            // 
+            lblRegister.Font = new Font("Century Schoolbook", 10.8F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            lblRegister.ForeColor = Color.FromArgb(0, 70, 160);
+            lblRegister.Location = new Point(490, 584);
+            lblRegister.Name = "lblRegister";
+            lblRegister.Size = new Size(149, 24);
+            lblRegister.TabIndex = 17;
+            lblRegister.Text = "Register here !";
+            // 
             // Login
             // 
             AcceptButton = btnLogin;
-            AutoScaleDimensions = new SizeF(17F, 36F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(950, 650);
+            Controls.Add(lblRegister);
+            Controls.Add(label5);
             Controls.Add(btnCancel);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -216,5 +242,7 @@
         private Label label3;
         private Label label4;
         private Button btnCancel;
+        private Label label5;
+        private Label lblRegister;
     }
 }

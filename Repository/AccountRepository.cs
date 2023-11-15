@@ -11,5 +11,7 @@ namespace Repository
     public class AccountRepository : IAccountRepository
     {
         public Account GetAccount(string username, string passWord) => AccountDAO.Instance.GetAccount(username, passWord);
+
+        public List<Account> GetAlll() => AccountDAO.Instance.GetAlll();
     }
 }

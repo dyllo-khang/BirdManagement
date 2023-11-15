@@ -10,5 +10,6 @@ namespace Repository
     public interface IAccountRepository
     {
         Account GetAccount(string username, string passWord);
+        List<Account> GetAlll();
     }
 }
