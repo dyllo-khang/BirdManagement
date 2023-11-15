@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BirdManagement
+namespace Bird_Farm_Shop
 {
-    public partial class UserForm : Form
+    public partial class Main_Form : Form
     {
-        private int id;
-        public UserForm(int id)
+        public int id;
+        public Main_Form(int id)
         {
             InitializeComponent();
             this.id = id;
