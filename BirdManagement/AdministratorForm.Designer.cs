@@ -1,6 +1,6 @@
 ﻿namespace Bird_Farm_Shop
 {
-    partial class Administrator_For_
+    partial class AdministratorForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrator_For_));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorForm));
             panel4 = new Panel();
+            button1 = new Button();
             panelSlide = new Panel();
             btnLogout = new Button();
             btnUserSetting = new Button();
@@ -40,9 +41,8 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
+            lbTitle = new Label();
             panelMain = new Panel();
-            label2 = new Label();
-            button1 = new Button();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -64,6 +64,19 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(200, 686);
             panel4.TabIndex = 2;
+            // 
+            // button1
+            // 
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(0, 380);
+            button1.Name = "button1";
+            button1.Size = new Size(200, 50);
+            button1.TabIndex = 8;
+            button1.Text = "Dashboard";
+            button1.UseVisualStyleBackColor = true;
             // 
             // panelSlide
             // 
@@ -160,7 +173,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(50, 143);
             label1.Name = "label1";
-            label1.Size = new Size(104, 20);
+            label1.Size = new Size(204, 36);
             label1.TabIndex = 1;
             label1.Text = "Administrator";
             // 
@@ -175,47 +188,35 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(lbTitle);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(200, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(982, 40);
             panel2.TabIndex = 3;
             // 
+            // lbTitle
+            // 
+            lbTitle.AutoSize = true;
+            lbTitle.ForeColor = Color.White;
+            lbTitle.Location = new Point(488, 9);
+            lbTitle.Name = "lbTitle";
+            lbTitle.Size = new Size(166, 36);
+            lbTitle.TabIndex = 2;
+            lbTitle.Text = "Title Name";
+            // 
             // panelMain
             // 
+            panelMain.BackColor = Color.White;
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(200, 40);
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(982, 646);
             panelMain.TabIndex = 4;
             // 
-            // label2
+            // AdministratorForm
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(488, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(83, 20);
-            label2.TabIndex = 2;
-            label2.Text = "Title Name";
-            // 
-            // button1
-            // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(0, 380);
-            button1.Name = "button1";
-            button1.Size = new Size(200, 50);
-            button1.TabIndex = 8;
-            button1.Text = "Dashboard";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // Administrator_For_
-            // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
             ClientSize = new Size(1182, 686);
@@ -225,9 +226,10 @@
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "Administrator_For_";
+            Name = "AdministratorForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Administrator Form";
+            Load += AdministratorForm_Load;
             panel4.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -251,7 +253,7 @@
         private Panel panelSlide;
         private Button button1;
         private Panel panel2;
-        private Label label2;
+        private Label lbTitle;
         private Panel panelMain;
     }
 }

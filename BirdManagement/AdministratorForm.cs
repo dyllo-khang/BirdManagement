@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BirdManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,10 @@ using System.Windows.Forms;
 
 namespace Bird_Farm_Shop
 {
-    public partial class Administrator_For_ : Form
+    public partial class AdministratorForm : Form
     {
-        public Administrator_For_()
+        private Form FormChild;
+        public AdministratorForm()
         {
             InitializeComponent();
         }
@@ -25,38 +27,50 @@ namespace Bird_Farm_Shop
             }
         }
 
-        public void slide(Button button)
+        private void OpenForm(Form child)
         {
-            panel4.BackColor = Color.White;
-            panel4.Height = button.Height;
-            panel4.Top = button.Top;
+            if (FormChild != null)
+            {
+                FormChild.Close();
+            }
+            FormChild = child;
+            child.TopLevel = false;
+            child.FormBorderStyle = FormBorderStyle.None;
+            child.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(child);
+            panelMain.Tag = child;
+            child.BringToFront();
+            lbTitle.Text = child.Text;
+            child.Show();
         }
-
-        
-
         private void btnProduct_Click(object sender, EventArgs e)
         {
-            slide(btnProduct);
+            OpenForm(new ProductForm());
         }
 
         private void btnManageOrders_Click(object sender, EventArgs e)
         {
-            slide(btnManageOrders);
+
         }
 
         private void btnManageBills_Click(object sender, EventArgs e)
         {
-            slide(btnManageBills);
+
         }
 
         private void btnUserSetting_Click(object sender, EventArgs e)
         {
-            slide(btnUserSetting);
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            slide(btnLogout);
+
+        }
+
+        private void AdministratorForm_Load(object sender, EventArgs e)
+        {
+            OpenForm(new ProductForm());
         }
     }
 }

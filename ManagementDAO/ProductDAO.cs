@@ -26,9 +26,49 @@ namespace ManagementDAO
 
         public List<Product> GetAll(string search = "")
         {
-            using(var context = new BirdManagementContext()) 
+            using(var context = new BirdManagementContext())
             {
-                return context.Products.Where(p => p.Name.Equals(search, StringComparison.OrdinalIgnoreCase)).Include(p => p.TypeId).ToList();
+                return context.Products.Include(p => p.Type).ToList().Where(p => p.Name.Contains(search, StringComparison.OrdinalIgnoreCase)).ToList();
+
+
+            }
+        }
+
+        public bool AddProduct(Product product)
+        {
+            try
+            {
+                using(var context = new BirdManagementContext())
+                {
+                    context.Products.Add(product);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateProduct(Product product)
+        {
+            try
+            {
+                using(var context = new BirdManagementContext())
+                {
+                    var existedProduct = context.Products.Find(product.Id);
+                    if (existedProduct != null)
+                    {
+                        context.Entry(existedProduct).CurrentValues.SetValues(product);
+                        context.SaveChanges();
+                    }
+                    return true;
+                }
+            }
+            catch
+            {
+                return false;
             }
         }
     }

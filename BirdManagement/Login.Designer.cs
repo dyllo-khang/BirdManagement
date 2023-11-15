@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             picClose = new PictureBox();
             label1 = new Label();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             pictureBox3 = new PictureBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
             label2 = new Label();
-            button1 = new Button();
+            btnLogin = new Button();
             label3 = new Label();
             label4 = new Label();
-            button2 = new Button();
+            btnCancel = new Button();
             ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -50,8 +49,7 @@
             // picClose
             // 
             picClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            picClose.Image = (Image)resources.GetObject("picClose.Image");
-            picClose.Location = new Point(920, 0);
+            picClose.Location = new Point(915, 0);
             picClose.Name = "picClose";
             picClose.Size = new Size(30, 29);
             picClose.TabIndex = 12;
@@ -82,7 +80,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 5);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(52, 54);
@@ -91,7 +88,6 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(417, 106);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(100, 100);
@@ -99,26 +95,28 @@
             pictureBox3.TabIndex = 8;
             pictureBox3.TabStop = false;
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.WindowFrame;
-            textBox1.Location = new Point(305, 314);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(325, 34);
-            textBox1.TabIndex = 9;
+            txtUsername.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
+            txtUsername.ForeColor = SystemColors.WindowFrame;
+            txtUsername.Location = new Point(305, 314);
+            txtUsername.Multiline = true;
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(325, 34);
+            txtUsername.TabIndex = 9;
+            txtUsername.Text = "sa";
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
-            textBox2.ForeColor = SystemColors.WindowFrame;
-            textBox2.Location = new Point(305, 400);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.PasswordChar = '*';
-            textBox2.Size = new Size(325, 34);
-            textBox2.TabIndex = 10;
+            txtPassword.Font = new Font("Century Gothic", 10.8F, FontStyle.Italic, GraphicsUnit.Point);
+            txtPassword.ForeColor = SystemColors.WindowFrame;
+            txtPassword.Location = new Point(305, 400);
+            txtPassword.Multiline = true;
+            txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
+            txtPassword.Size = new Size(325, 34);
+            txtPassword.TabIndex = 10;
+            txtPassword.Text = "123";
             // 
             // label2
             // 
@@ -126,22 +124,23 @@
             label2.Font = new Font("Century Schoolbook", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(296, 221);
             label2.Name = "label2";
-            label2.Size = new Size(343, 40);
+            label2.Size = new Size(529, 62);
             label2.TabIndex = 11;
             label2.Text = "Please Login First";
             // 
-            // button1
+            // btnLogin
             // 
-            button1.BackColor = Color.FromArgb(0, 70, 160);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(305, 469);
-            button1.Name = "button1";
-            button1.Size = new Size(325, 40);
-            button1.TabIndex = 12;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            btnLogin.BackColor = Color.FromArgb(0, 70, 160);
+            btnLogin.FlatAppearance.BorderSize = 0;
+            btnLogin.FlatStyle = FlatStyle.Flat;
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(305, 469);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(325, 40);
+            btnLogin.TabIndex = 12;
+            btnLogin.Text = "Login";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
             // label3
             // 
@@ -159,33 +158,34 @@
             label4.TabIndex = 14;
             label4.Text = "Password :";
             // 
-            // button2
+            // btnCancel
             // 
-            button2.BackColor = Color.Red;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(305, 525);
-            button2.Name = "button2";
-            button2.Size = new Size(325, 40);
-            button2.TabIndex = 15;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += btnCancel_Click;
+            btnCancel.BackColor = Color.Red;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(305, 525);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(325, 40);
+            btnCancel.TabIndex = 15;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AcceptButton = btnLogin;
+            AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(950, 650);
-            Controls.Add(button2);
+            Controls.Add(btnCancel);
             Controls.Add(label4);
             Controls.Add(label3);
-            Controls.Add(button1);
+            Controls.Add(btnLogin);
             Controls.Add(label2);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
             Controls.Add(pictureBox3);
             Controls.Add(panel1);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
@@ -209,12 +209,12 @@
         private Panel panel1;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
         private Label label2;
-        private Button button1;
+        private Button btnLogin;
         private Label label3;
         private Label label4;
-        private Button button2;
+        private Button btnCancel;
     }
 }
