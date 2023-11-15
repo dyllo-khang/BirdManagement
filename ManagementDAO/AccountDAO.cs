@@ -1,0 +1,34 @@
+﻿using BusinessObject.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ManagementDAO
+{
+    public class AccountDAO
+    {
+        private static AccountDAO instance;
+        private AccountDAO() { }
+        public static AccountDAO Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new AccountDAO();
+                }
+                return instance;
+            }
+        }
+
+        public Account GetAccount(string userName, string passWord)
+        {
+            using(var context = new BirdManagementContext())
+            {
+                return context.Accounts.FirstOrDefault(p => p.Username.Equals(userName) && p.Password.Equals(passWord));
+            }
+        }
+    }
+}
