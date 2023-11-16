@@ -11,6 +11,6 @@ namespace BusinessObject.Models
         public int? Role { get; set; }
         public int? Actice { get; set; }
 
-        public virtual Customer? Customer { get; set; }
+        public virtual AccountDetail? AccountDetail { get; set; }
     }
 }

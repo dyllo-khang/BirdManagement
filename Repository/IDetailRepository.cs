@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Service
+namespace Repository
 {
-    public interface ICustomerService
+    public interface IDetailRepository
     {
-        List<Customer> GetAll();
+        List<AccountDetail> GetAll();
     }
 }

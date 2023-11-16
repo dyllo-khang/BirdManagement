@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace BusinessObject.Models
 {
-    public partial class Customer
+    public partial class AccountDetail
     {
-        public Customer()
+        public AccountDetail()
         {
             Bills = new HashSet<Bill>();
         }

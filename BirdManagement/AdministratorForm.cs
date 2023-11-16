@@ -17,12 +17,12 @@ namespace Bird_Farm_Shop
     {
         private Form FormChild;
         private int id;
-        ICustomerService _customerService;
+        IDetailService _customerService;
         public AdministratorForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            _customerService = new CustomerService();
+            _customerService = new DetailService();
             lbName.Text = _customerService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
         }
 

@@ -19,9 +19,9 @@ namespace ManagementDAO
         }
 
         public virtual DbSet<Account> Accounts { get; set; } = null!;
+        public virtual DbSet<AccountDetail> AccountDetails { get; set; } = null!;
         public virtual DbSet<Bill> Bills { get; set; } = null!;
         public virtual DbSet<BillDescription> BillDescriptions { get; set; } = null!;
-        public virtual DbSet<Customer> Customers { get; set; } = null!;
         public virtual DbSet<Product> Products { get; set; } = null!;
         public virtual DbSet<TypeProduct> TypeProducts { get; set; } = null!;
 
@@ -55,6 +55,29 @@ namespace ManagementDAO
                 entity.Property(e => e.Username).HasMaxLength(50);
             });
 
+            modelBuilder.Entity<AccountDetail>(entity =>
+            {
+                entity.ToTable("AccountDetail");
+
+                entity.Property(e => e.Id)
+                    .ValueGeneratedNever()
+                    .HasColumnName("ID");
+
+                entity.Property(e => e.Address).HasMaxLength(50);
+
+                entity.Property(e => e.Email).HasMaxLength(50);
+
+                entity.Property(e => e.Name).HasMaxLength(50);
+
+                entity.Property(e => e.Phone).HasMaxLength(50);
+
+                entity.HasOne(d => d.IdNavigation)
+                    .WithOne(p => p.AccountDetail)
+                    .HasForeignKey<AccountDetail>(d => d.Id)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__Customer__ID__398D8EEE");
+            });
+
             modelBuilder.Entity<Bill>(entity =>
             {
                 entity.ToTable("Bill");
@@ -66,6 +89,8 @@ namespace ManagementDAO
                 entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
 
                 entity.Property(e => e.DateCheckOut).HasColumnType("date");
+
+                entity.Property(e => e.StaffId).HasColumnName("StaffID");
 
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Bills)
@@ -94,29 +119,6 @@ namespace ManagementDAO
                     .WithMany(p => p.BillDescriptions)
                     .HasForeignKey(d => d.ProductId)
                     .HasConstraintName("FK__BillDescr__Produ__44FF419A");
-            });
-
-            modelBuilder.Entity<Customer>(entity =>
-            {
-                entity.ToTable("Customer");
-
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("ID");
-
-                entity.Property(e => e.Address).HasMaxLength(50);
-
-                entity.Property(e => e.Email).HasMaxLength(50);
-
-                entity.Property(e => e.Name).HasMaxLength(50);
-
-                entity.Property(e => e.Phone).HasMaxLength(50);
-
-                entity.HasOne(d => d.IdNavigation)
-                    .WithOne(p => p.Customer)
-                    .HasForeignKey<Customer>(d => d.Id)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Customer__ID__398D8EEE");
             });
 
             modelBuilder.Entity<Product>(entity =>

@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using ManagementDAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public interface ICustomerRepository
+    public class DetailRepository : IDetailRepository
     {
-        List<Customer> GetAll();
+        public List<AccountDetail> GetAll() => DetailDAO.Instance.GetAll();
     }
 }

@@ -7,27 +7,27 @@ using System.Threading.Tasks;
 
 namespace ManagementDAO
 {
-    public class CustomerDAO
+    public class DetailDAO
     {
-        private static CustomerDAO instance;
-        private CustomerDAO() { }
-        public static CustomerDAO Instance
+        private static DetailDAO instance;
+        private DetailDAO() { }
+        public static DetailDAO Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new CustomerDAO();
+                    instance = new DetailDAO();
                 }
                 return instance;
             }
         }
 
-        public List<Customer> GetAll()
+        public List<AccountDetail> GetAll()
         {
             using(var context = new BirdManagementContext())
             {
-                return context.Customers.ToList();
+                return context.AccountDetails.ToList();
             }
         }
     }
