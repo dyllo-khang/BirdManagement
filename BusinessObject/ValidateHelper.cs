@@ -63,5 +63,13 @@ namespace BusinessObject
             if (string.IsNullOrWhiteSpace(id)) return "StudentID cannot be blank";
             return Regex.IsMatch(id, pattern) ? null : "StudentID must SExxx !!!";
         }
+
+        public static string ValidateNumber(string msg, string number)
+        {
+            string pattern = @"^\d*\.?\d+$";
+            if (string.IsNullOrWhiteSpace(number)) return $"{msg} can not be null...";
+            if (!Regex.IsMatch(number, pattern)) return "Must be number...";
+            return null;
+        }
     }
 }

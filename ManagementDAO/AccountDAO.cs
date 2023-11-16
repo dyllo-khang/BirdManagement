@@ -36,7 +36,7 @@ namespace ManagementDAO
         {
             using(var context = new BirdManagementContext())
             {
-                return context.Accounts.Include(a => a.Customer).ToList();
+                return context.Accounts.Include(a => a.AccountDetail).ToList();
             }
         }
     }

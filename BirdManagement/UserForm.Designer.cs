@@ -115,7 +115,7 @@
             tabPage1.Controls.Add(label3);
             tabPage1.Controls.Add(dataGridView1);
             tabPage1.Controls.Add(label1);
-            tabPage1.Location = new Point(4, 30);
+            tabPage1.Location = new Point(8, 50);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(1464, 552);
@@ -142,7 +142,7 @@
             numericUpDown2.Margin = new Padding(6, 3, 6, 3);
             numericUpDown2.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(108, 30);
+            numericUpDown2.Size = new Size(108, 43);
             numericUpDown2.TabIndex = 22;
             // 
             // label13
@@ -168,7 +168,7 @@
             label11.AutoSize = true;
             label11.Location = new Point(773, 376);
             label11.Name = "label11";
-            label11.Size = new Size(67, 21);
+            label11.Size = new Size(106, 36);
             label11.TabIndex = 19;
             label11.Text = "Total : ";
             // 
@@ -177,7 +177,7 @@
             label10.AutoSize = true;
             label10.Location = new Point(773, 320);
             label10.Name = "label10";
-            label10.Size = new Size(101, 21);
+            label10.Size = new Size(162, 36);
             label10.TabIndex = 18;
             label10.Text = "Discount : ";
             // 
@@ -187,7 +187,7 @@
             numericUpDown1.Margin = new Padding(4, 3, 4, 3);
             numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(185, 30);
+            numericUpDown1.Size = new Size(185, 43);
             numericUpDown1.TabIndex = 17;
             // 
             // label9
@@ -195,7 +195,7 @@
             label9.AutoSize = true;
             label9.Location = new Point(773, 273);
             label9.Name = "label9";
-            label9.Size = new Size(115, 21);
+            label9.Size = new Size(184, 36);
             label9.TabIndex = 16;
             label9.Text = "Sales Total : ";
             // 
@@ -216,14 +216,14 @@
             // 
             textBox4.Location = new Point(206, 421);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(496, 30);
+            textBox4.Size = new Size(496, 43);
             textBox4.TabIndex = 13;
             // 
             // textBox3
             // 
             textBox3.Location = new Point(206, 370);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(496, 30);
+            textBox3.Size = new Size(496, 43);
             textBox3.TabIndex = 12;
             // 
             // textBox2
@@ -231,7 +231,7 @@
             textBox2.Enabled = false;
             textBox2.Location = new Point(206, 320);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(496, 30);
+            textBox2.Size = new Size(496, 43);
             textBox2.TabIndex = 11;
             // 
             // label8
@@ -239,7 +239,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(30, 486);
             label8.Name = "label8";
-            label8.Size = new Size(98, 21);
+            label8.Size = new Size(153, 36);
             label8.TabIndex = 10;
             label8.Text = "Quantity :";
             // 
@@ -248,7 +248,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(30, 430);
             label7.Name = "label7";
-            label7.Size = new Size(63, 21);
+            label7.Size = new Size(101, 36);
             label7.TabIndex = 9;
             label7.Text = "Price :";
             // 
@@ -257,7 +257,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(30, 379);
             label6.Name = "label6";
-            label6.Size = new Size(74, 21);
+            label6.Size = new Size(118, 36);
             label6.TabIndex = 8;
             label6.Text = "Name :";
             // 
@@ -266,7 +266,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(30, 329);
             label5.Name = "label5";
-            label5.Size = new Size(38, 21);
+            label5.Size = new Size(60, 36);
             label5.TabIndex = 7;
             label5.Text = "ID :";
             // 
@@ -287,7 +287,7 @@
             // 
             textBox1.Location = new Point(206, 267);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(367, 30);
+            textBox1.Size = new Size(367, 43);
             textBox1.TabIndex = 5;
             // 
             // label4
@@ -295,7 +295,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(30, 276);
             label4.Name = "label4";
-            label4.Size = new Size(168, 21);
+            label4.Size = new Size(268, 36);
             label4.TabIndex = 4;
             label4.Text = "Search by Name :";
             // 
@@ -316,7 +316,7 @@
             label3.Font = new Font("Century Schoolbook", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(993, 21);
             label3.Name = "label3";
-            label3.Size = new Size(66, 27);
+            label3.Size = new Size(106, 43);
             label3.TabIndex = 2;
             label3.Text = "Cart";
             // 
@@ -337,7 +337,7 @@
             label1.Font = new Font("Century Schoolbook", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(307, 21);
             label1.Name = "label1";
-            label1.Size = new Size(121, 27);
+            label1.Size = new Size(193, 43);
             label1.TabIndex = 0;
             label1.Text = "Bird List";
             // 
@@ -352,10 +352,10 @@
             tabPage2.Controls.Add(label15);
             tabPage2.Controls.Add(dateTimePicker1);
             tabPage2.Controls.Add(label14);
-            tabPage2.Location = new Point(4, 30);
+            tabPage2.Location = new Point(8, 46);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1617, 552);
+            tabPage2.Size = new Size(1609, 532);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Bill Detail";
             tabPage2.UseVisualStyleBackColor = true;
@@ -378,7 +378,7 @@
             label17.Font = new Font("Century Schoolbook", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label17.Location = new Point(1012, 32);
             label17.Name = "label17";
-            label17.Size = new Size(147, 27);
+            label17.Size = new Size(236, 43);
             label17.TabIndex = 7;
             label17.Text = "Bill Details";
             // 
@@ -400,7 +400,7 @@
             label16.Font = new Font("Century Schoolbook", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label16.Location = new Point(276, 32);
             label16.Name = "label16";
-            label16.Size = new Size(217, 27);
+            label16.Size = new Size(348, 43);
             label16.TabIndex = 5;
             label16.Text = "Bill Management";
             // 
@@ -421,7 +421,7 @@
             // 
             dateTimePicker2.Location = new Point(453, 509);
             dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(215, 30);
+            dateTimePicker2.Size = new Size(215, 43);
             dateTimePicker2.TabIndex = 3;
             // 
             // label15
@@ -429,7 +429,7 @@
             label15.AutoSize = true;
             label15.Location = new Point(417, 518);
             label15.Name = "label15";
-            label15.Size = new Size(30, 21);
+            label15.Size = new Size(47, 36);
             label15.TabIndex = 2;
             label15.Text = "To";
             // 
@@ -437,7 +437,7 @@
             // 
             dateTimePicker1.Location = new Point(196, 509);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(215, 30);
+            dateTimePicker1.Size = new Size(215, 43);
             dateTimePicker1.TabIndex = 1;
             // 
             // label14
@@ -445,7 +445,7 @@
             label14.AutoSize = true;
             label14.Location = new Point(8, 518);
             label14.Name = "label14";
-            label14.Size = new Size(182, 21);
+            label14.Size = new Size(292, 36);
             label14.TabIndex = 0;
             label14.Text = "Filter By Date : From";
             // 
@@ -456,7 +456,7 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 604);
+            panel1.Location = new Point(0, 614);
             panel1.Name = "panel1";
             panel1.Size = new Size(1484, 82);
             panel1.TabIndex = 1;
@@ -496,7 +496,7 @@
             // 
             // Main_Form
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1484, 686);
             Controls.Add(panel1);

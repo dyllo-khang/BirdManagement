@@ -1,4 +1,5 @@
-﻿using BusinessObject.Models;
+﻿using BusinessObject;
+using BusinessObject.Models;
 using Service;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,12 @@ namespace BirdManagement
             string name = txtName.Text;
             int typeID = int.Parse(cbxType.SelectedValue.ToString());
             int quantity = int.Parse(udQuantity.Value.ToString());
+            string resultPrice = ValidateHelper.ValidateNumber("Price", txtPrice.Text);
+            if(resultPrice != null)
+            {
+                MessageBox.Show(resultPrice, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             float price = float.Parse(txtPrice.Text);
             float importPrice = float.Parse(txtImPrice.Text);
             var product = _productService.GetAll().FirstOrDefault(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase) && p.TypeId == typeID);

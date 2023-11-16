@@ -17,13 +17,13 @@ namespace Bird_Farm_Shop
     {
         private Form FormChild;
         private int id;
-        IAccountService _accountService;
+        IDetailService _customerService;
         public AdministratorForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            _accountService = new AccountService();
-            lbName.Text = _accountService.GetAlll().SingleOrDefault(a => a.Id == id).Customer.Name;
+            _customerService = new DetailService();
+            lbName.Text = _customerService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace Bird_Farm_Shop
             if (MessageBox.Show("Logout Application?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Hide();
-                LoginForm login = new LoginForm();
+                Login login = new Login();
                 login.ShowDialog();
             }
 

@@ -13,7 +13,7 @@
     <Compile Update="CreateAccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="LoginForm.cs">
+    <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
