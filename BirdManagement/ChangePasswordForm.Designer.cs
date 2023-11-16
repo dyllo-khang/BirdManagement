@@ -53,7 +53,7 @@
             btnPassCancel.FlatStyle = FlatStyle.Flat;
             btnPassCancel.ForeColor = Color.Black;
             btnPassCancel.Location = new Point(798, 458);
-            btnPassCancel.Margin = new Padding(4, 4, 4, 4);
+            btnPassCancel.Margin = new Padding(4);
             btnPassCancel.Name = "btnPassCancel";
             btnPassCancel.Size = new Size(152, 48);
             btnPassCancel.TabIndex = 76;
@@ -67,7 +67,7 @@
             btnUpdate.FlatStyle = FlatStyle.Flat;
             btnUpdate.ForeColor = Color.White;
             btnUpdate.Location = new Point(605, 458);
-            btnUpdate.Margin = new Padding(4, 4, 4, 4);
+            btnUpdate.Margin = new Padding(4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(152, 48);
             btnUpdate.TabIndex = 75;
@@ -77,9 +77,9 @@
             // txtRePass2
             // 
             txtRePass2.Location = new Point(184, 385);
-            txtRePass2.Margin = new Padding(5, 5, 5, 5);
+            txtRePass2.Margin = new Padding(5);
             txtRePass2.Name = "txtRePass2";
-            txtRePass2.Size = new Size(768, 26);
+            txtRePass2.Size = new Size(768, 30);
             txtRePass2.TabIndex = 74;
             // 
             // label9
@@ -88,16 +88,16 @@
             label9.Location = new Point(31, 315);
             label9.Margin = new Padding(5, 0, 5, 0);
             label9.Name = "label9";
-            label9.Size = new Size(130, 20);
+            label9.Size = new Size(157, 22);
             label9.TabIndex = 73;
             label9.Text = "New Password : ";
             // 
             // txtNPass
             // 
             txtNPass.Location = new Point(184, 309);
-            txtNPass.Margin = new Padding(5, 5, 5, 5);
+            txtNPass.Margin = new Padding(5);
             txtNPass.Name = "txtNPass";
-            txtNPass.Size = new Size(768, 26);
+            txtNPass.Size = new Size(768, 30);
             txtNPass.TabIndex = 72;
             // 
             // label6
@@ -106,16 +106,16 @@
             label6.Location = new Point(27, 391);
             label6.Margin = new Padding(5, 0, 5, 0);
             label6.Name = "label6";
-            label6.Size = new Size(152, 20);
+            label6.Size = new Size(188, 22);
             label6.TabIndex = 71;
             label6.Text = "Re-type Password : ";
             // 
             // txtCurPass
             // 
             txtCurPass.Location = new Point(184, 237);
-            txtCurPass.Margin = new Padding(5, 5, 5, 5);
+            txtCurPass.Margin = new Padding(5);
             txtCurPass.Name = "txtCurPass";
-            txtCurPass.Size = new Size(768, 26);
+            txtCurPass.Size = new Size(768, 30);
             txtCurPass.TabIndex = 70;
             // 
             // label7
@@ -124,7 +124,7 @@
             label7.Location = new Point(31, 243);
             label7.Margin = new Padding(5, 0, 5, 0);
             label7.Name = "label7";
-            label7.Size = new Size(91, 20);
+            label7.Size = new Size(110, 22);
             label7.TabIndex = 69;
             label7.Text = "Password : ";
             // 
@@ -134,7 +134,7 @@
             lblUsername.Location = new Point(217, 169);
             lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(83, 20);
+            lblUsername.Size = new Size(101, 22);
             lblUsername.TabIndex = 68;
             lblUsername.Text = "Username";
             // 
@@ -142,7 +142,7 @@
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(31, 88);
-            pictureBox1.Margin = new Padding(4, 4, 4, 4);
+            pictureBox1.Margin = new Padding(4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(98, 101);
             pictureBox1.TabIndex = 67;
@@ -152,7 +152,6 @@
             // 
             label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Image = (Image)resources.GetObject("label2.Image");
             label2.ImageAlign = ContentAlignment.MiddleLeft;
             label2.Location = new Point(31, 17);
             label2.Margin = new Padding(4, 0, 4, 0);
@@ -193,8 +192,9 @@
             // 
             // ChangePasswordForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(984, 661);
             Controls.Add(panel1);
             Controls.Add(btnPassCancel);
@@ -208,7 +208,8 @@
             Controls.Add(lblUsername);
             Controls.Add(pictureBox1);
             Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4, 4, 4, 4);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4);
             Name = "ChangePasswordForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangePasswordForm";

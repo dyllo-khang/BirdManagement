@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             button4 = new Button();
@@ -88,7 +87,7 @@
             tabControl1.Location = new Point(0, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1625, 586);
+            tabControl1.Size = new Size(1472, 586);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -119,7 +118,7 @@
             tabPage1.Location = new Point(4, 30);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1617, 552);
+            tabPage1.Size = new Size(1464, 552);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Dashboard";
             tabPage1.UseVisualStyleBackColor = true;
@@ -459,7 +458,7 @@
             panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(0, 604);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1284, 82);
+            panel1.Size = new Size(1484, 82);
             panel1.TabIndex = 1;
             // 
             // button1
@@ -468,9 +467,8 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(1151, 19);
+            button1.Location = new Point(1351, 19);
             button1.Name = "button1";
             button1.Size = new Size(121, 45);
             button1.TabIndex = 16;
@@ -480,7 +478,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(9, 19);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(52, 54);
@@ -501,7 +498,7 @@
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1284, 686);
+            ClientSize = new Size(1484, 686);
             Controls.Add(panel1);
             Controls.Add(tabControl1);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);

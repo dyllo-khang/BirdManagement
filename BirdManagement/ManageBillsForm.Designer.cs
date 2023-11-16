@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageBillsForm));
             label9 = new Label();
             dataGridView2 = new DataGridView();
             label1 = new Label();
@@ -96,11 +97,12 @@
             // 
             label2.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
+            label2.Image = (Image)resources.GetObject("label2.Image");
             label2.ImageAlign = ContentAlignment.MiddleLeft;
-            label2.Location = new Point(31, 17);
+            label2.Location = new Point(13, 19);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(201, 37);
+            label2.Size = new Size(182, 37);
             label2.TabIndex = 14;
             label2.Text = "Manage Bill";
             label2.TextAlign = ContentAlignment.MiddleRight;

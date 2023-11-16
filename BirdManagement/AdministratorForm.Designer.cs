@@ -45,14 +45,19 @@
             lbName = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            panelSlide1 = new Panel();
             panelTitle = new Panel();
             lbTitle = new Label();
             panelMain = new Panel();
+            panel2 = new Panel();
+            picClose = new PictureBox();
             panelSlide.SuspendLayout();
             panelSubUser.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTitle.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
             SuspendLayout();
             // 
             // panelSlide
@@ -68,7 +73,7 @@
             panelSlide.Dock = DockStyle.Left;
             panelSlide.Location = new Point(0, 0);
             panelSlide.Name = "panelSlide";
-            panelSlide.Size = new Size(200, 686);
+            panelSlide.Size = new Size(200, 700);
             panelSlide.TabIndex = 2;
             // 
             // btnDashboard
@@ -77,7 +82,7 @@
             btnDashboard.FlatAppearance.BorderSize = 0;
             btnDashboard.FlatStyle = FlatStyle.Flat;
             btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(0, 580);
+            btnDashboard.Location = new Point(0, 585);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Padding = new Padding(5, 0, 0, 0);
             btnDashboard.Size = new Size(200, 50);
@@ -96,7 +101,7 @@
             panelSubUser.Dock = DockStyle.Top;
             panelSubUser.Location = new Point(0, 380);
             panelSubUser.Name = "panelSubUser";
-            panelSubUser.Size = new Size(200, 200);
+            panelSubUser.Size = new Size(200, 205);
             panelSubUser.TabIndex = 8;
             // 
             // btnActAccount
@@ -108,7 +113,7 @@
             btnActAccount.Location = new Point(0, 150);
             btnActAccount.Name = "btnActAccount";
             btnActAccount.Padding = new Padding(20, 0, 0, 0);
-            btnActAccount.Size = new Size(200, 50);
+            btnActAccount.Size = new Size(200, 55);
             btnActAccount.TabIndex = 9;
             btnActAccount.Text = "Active/UnActive Account";
             btnActAccount.TextAlign = ContentAlignment.MiddleLeft;
@@ -171,7 +176,7 @@
             btnLogout.ForeColor = Color.White;
             btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(0, 636);
+            btnLogout.Location = new Point(0, 650);
             btnLogout.Name = "btnLogout";
             btnLogout.Size = new Size(200, 50);
             btnLogout.TabIndex = 6;
@@ -283,20 +288,28 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
+            // panelSlide1
+            // 
+            panelSlide1.Location = new Point(0, 180);
+            panelSlide1.Name = "panelSlide1";
+            panelSlide1.Size = new Size(8, 50);
+            panelSlide1.TabIndex = 6;
+            // 
             // panelTitle
             // 
+            panelTitle.Controls.Add(picClose);
             panelTitle.Controls.Add(lbTitle);
             panelTitle.Dock = DockStyle.Top;
             panelTitle.Font = new Font("Century Schoolbook", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            panelTitle.Location = new Point(200, 0);
+            panelTitle.Location = new Point(208, 0);
             panelTitle.Name = "panelTitle";
-            panelTitle.Size = new Size(982, 40);
+            panelTitle.Size = new Size(974, 40);
             panelTitle.TabIndex = 3;
             // 
             // lbTitle
             // 
             lbTitle.ForeColor = Color.White;
-            lbTitle.Location = new Point(328, 9);
+            lbTitle.Location = new Point(306, 9);
             lbTitle.Name = "lbTitle";
             lbTitle.Size = new Size(378, 21);
             lbTitle.TabIndex = 2;
@@ -306,20 +319,39 @@
             // panelMain
             // 
             panelMain.BackColor = Color.White;
-            panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(200, 40);
+            panelMain.Location = new Point(208, 40);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(982, 646);
+            panelMain.Size = new Size(974, 660);
             panelMain.TabIndex = 4;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(panelSlide1);
+            panel2.Dock = DockStyle.Left;
+            panel2.Location = new Point(200, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(8, 700);
+            panel2.TabIndex = 5;
+            // 
+            // picClose
+            // 
+            picClose.Image = (Image)resources.GetObject("picClose.Image");
+            picClose.Location = new Point(944, 0);
+            picClose.Name = "picClose";
+            picClose.Size = new Size(30, 30);
+            picClose.TabIndex = 10;
+            picClose.TabStop = false;
+            picClose.Click += picClose_Click_1;
             // 
             // AdministratorForm
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
-            ClientSize = new Size(1182, 686);
-            Controls.Add(panelMain);
+            ClientSize = new Size(1182, 700);
             Controls.Add(panelTitle);
+            Controls.Add(panel2);
+            Controls.Add(panelMain);
             Controls.Add(panelSlide);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -334,6 +366,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitle.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picClose).EndInit();
             ResumeLayout(false);
         }
 
@@ -359,5 +393,8 @@
         private Button btnChangePass;
         private Button btnUpdateAcc;
         private Button btnCreateAcc;
+        private Panel panelSlide1;
+        private Panel panel2;
+        private PictureBox picClose;
     }
 }
