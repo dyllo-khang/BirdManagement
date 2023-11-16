@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,14 @@ namespace BirdManagement
     public partial class MainForm : Form
     {
         private Form FormChild;
-        public MainForm()
+        private int id;
+        private IDetailService _detailservice;
+        public MainForm(int id)
         {
             InitializeComponent();
+            _detailservice = new DetailService();
+            this.id = id;
+            lbName.Text = _detailservice.GetAll().SingleOrDefault(d => d.Id == id).Name;
         }
         #region panelSlide
         private void OpenForm(Form child)
@@ -86,6 +92,11 @@ namespace BirdManagement
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTimer.Text = DateTime.Now.ToString("HH:mm:ss tt dd/MM/yyyy");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            OpenForm(new NewTransactionForm());
         }
     }
 }

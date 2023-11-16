@@ -1,4 +1,5 @@
-﻿using Service;
+﻿using BirdManagement;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,12 @@ namespace Bird_Farm_Shop
     public partial class Login : Form
     {
         private IAccountService _accountService;
+        private IDetailService _detailservice;
         public Login()
         {
             InitializeComponent();
             _accountService = new AccountService();
+            _detailservice = new DetailService();
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -45,13 +48,19 @@ namespace Bird_Farm_Shop
                 {
                     if (account.Role == 1)
                     {
+                        string name = _detailservice.GetAll().SingleOrDefault(d => d.Id == account.Id).Name;
+                        MessageBox.Show($"Wellcome to {name}", "Access Granted", MessageBoxButtons.OK);
                         AdministratorForm administratorForm = new AdministratorForm(account.Id);
                         administratorForm.Show();
                         this.Hide();
                     }
                     if (account.Role == 2)
                     {
-
+                        string name = _detailservice.GetAll().SingleOrDefault(d => d.Id == account.Id).Name;
+                        MessageBox.Show($"Wellcome to {name}", "Access Granted", MessageBoxButtons.OK);
+                        MainForm userForm = new MainForm(account.Id);
+                        userForm.Show();
+                        this.Hide();
                     }
                 }
                 else
@@ -59,6 +68,17 @@ namespace Bird_Farm_Shop
                     MessageBox.Show("Your account has been locked, please contact administrator!!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("Login failed!! Username or Password is not correct...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void lblRegister_Click(object sender, EventArgs e)
+        {
+            RegisterForm reg = new RegisterForm();
+            reg.Show();
         }
     }
 }

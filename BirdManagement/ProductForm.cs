@@ -68,7 +68,7 @@ namespace BirdManagement
             int typeID = int.Parse(cbxType.SelectedValue.ToString());
             int quantity = int.Parse(udQuantity.Value.ToString());
             string resultPrice = ValidateHelper.ValidateNumber("Price", txtPrice.Text);
-            if(resultPrice != null)
+            if (resultPrice != null)
             {
                 MessageBox.Show(resultPrice, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

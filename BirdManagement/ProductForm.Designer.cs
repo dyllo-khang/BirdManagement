@@ -106,6 +106,7 @@
             // 
             // dgvProduct
             // 
+            dgvProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProduct.BackgroundColor = Color.White;
             dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProduct.Location = new Point(0, 64);
@@ -123,7 +124,7 @@
             label1.Font = new Font("Century Schoolbook", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(388, 21);
             label1.Name = "label1";
-            label1.Size = new Size(416, 50);
+            label1.Size = new Size(208, 25);
             label1.TabIndex = 4;
             label1.Text = "Bird Management";
             // 
@@ -132,7 +133,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(29, 360);
             label3.Name = "label3";
-            label3.Size = new Size(63, 37);
+            label3.Size = new Size(33, 20);
             label3.TabIndex = 5;
             label3.Text = "ID :";
             // 
@@ -141,7 +142,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(29, 416);
             label4.Name = "label4";
-            label4.Size = new Size(184, 37);
+            label4.Size = new Size(92, 20);
             label4.TabIndex = 6;
             label4.Text = "Bird Name :";
             // 
@@ -150,7 +151,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(29, 468);
             label5.Name = "label5";
-            label5.Size = new Size(159, 37);
+            label5.Size = new Size(79, 20);
             label5.TabIndex = 7;
             label5.Text = "Quantity :";
             // 
@@ -159,7 +160,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(488, 360);
             label6.Name = "label6";
-            label6.Size = new Size(175, 37);
+            label6.Size = new Size(89, 20);
             label6.TabIndex = 8;
             label6.Text = "Saleprice  :";
             // 
@@ -168,7 +169,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(488, 416);
             label7.Name = "label7";
-            label7.Size = new Size(187, 37);
+            label7.Size = new Size(96, 20);
             label7.TabIndex = 9;
             label7.Text = "Input Price :";
             // 
@@ -177,7 +178,7 @@
             label8.AutoSize = true;
             label8.Location = new Point(488, 468);
             label8.Name = "label8";
-            label8.Size = new Size(180, 37);
+            label8.Size = new Size(91, 20);
             label8.TabIndex = 10;
             label8.Text = "Category  :";
             // 
@@ -185,28 +186,28 @@
             // 
             txtID.Location = new Point(124, 354);
             txtID.Name = "txtID";
-            txtID.Size = new Size(332, 44);
+            txtID.Size = new Size(332, 26);
             txtID.TabIndex = 11;
             // 
             // txtName
             // 
             txtName.Location = new Point(124, 410);
             txtName.Name = "txtName";
-            txtName.Size = new Size(332, 44);
+            txtName.Size = new Size(332, 26);
             txtName.TabIndex = 12;
             // 
             // txtPrice
             // 
             txtPrice.Location = new Point(590, 354);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(340, 44);
+            txtPrice.Size = new Size(340, 26);
             txtPrice.TabIndex = 13;
             // 
             // txtImPrice
             // 
             txtImPrice.Location = new Point(590, 410);
             txtImPrice.Name = "txtImPrice";
-            txtImPrice.Size = new Size(340, 44);
+            txtImPrice.Size = new Size(340, 26);
             txtImPrice.TabIndex = 14;
             // 
             // udQuantity
@@ -215,7 +216,7 @@
             udQuantity.Margin = new Padding(13, 16, 13, 16);
             udQuantity.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             udQuantity.Name = "udQuantity";
-            udQuantity.Size = new Size(118, 44);
+            udQuantity.Size = new Size(118, 26);
             udQuantity.TabIndex = 15;
             // 
             // cbxType
@@ -223,7 +224,7 @@
             cbxType.FormattingEnabled = true;
             cbxType.Location = new Point(590, 460);
             cbxType.Name = "cbxType";
-            cbxType.Size = new Size(340, 45);
+            cbxType.Size = new Size(340, 28);
             cbxType.TabIndex = 16;
             // 
             // btnAdd
@@ -282,8 +283,9 @@
             // 
             // ProductForm
             // 
-            AutoScaleDimensions = new SizeF(18F, 37F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1009, 667);
             Controls.Add(btnExport);
             Controls.Add(btnImport);

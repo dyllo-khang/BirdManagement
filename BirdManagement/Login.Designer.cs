@@ -130,7 +130,7 @@
             label2.Font = new Font("Century Schoolbook", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(296, 221);
             label2.Name = "label2";
-            label2.Size = new Size(343, 40);
+            label2.Size = new Size(276, 32);
             label2.TabIndex = 11;
             label2.Text = "Please Login First";
             // 
@@ -195,11 +195,12 @@
             lblRegister.Size = new Size(149, 24);
             lblRegister.TabIndex = 17;
             lblRegister.Text = "Register here !";
+            lblRegister.Click += lblRegister_Click;
             // 
             // Login
             // 
             AcceptButton = btnLogin;
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(950, 650);

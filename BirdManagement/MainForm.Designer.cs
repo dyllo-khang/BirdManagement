@@ -38,14 +38,14 @@
             btnOProduct = new Button();
             btnNTran = new Button();
             panel1 = new Panel();
-            lbName = new Label();
+            lb1 = new Label();
             pictureBox1 = new PictureBox();
             panel3 = new Panel();
             panelSlide1 = new Panel();
             panel2 = new Panel();
             picClose = new PictureBox();
             pictureBox2 = new PictureBox();
-            label2 = new Label();
+            lbName = new Label();
             panelMain = new Panel();
             timer1 = new System.Windows.Forms.Timer(components);
             panelBottom = new Panel();
@@ -192,7 +192,7 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(lbName);
+            panel1.Controls.Add(lb1);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -200,15 +200,15 @@
             panel1.Size = new Size(200, 180);
             panel1.TabIndex = 0;
             // 
-            // lbName
+            // lb1
             // 
-            lbName.AutoSize = true;
-            lbName.ForeColor = Color.White;
-            lbName.Location = new Point(48, 139);
-            lbName.Name = "lbName";
-            lbName.Size = new Size(46, 21);
-            lbName.TabIndex = 2;
-            lbName.Text = "User";
+            lb1.AutoSize = true;
+            lb1.ForeColor = Color.White;
+            lb1.Location = new Point(73, 139);
+            lb1.Name = "lb1";
+            lb1.Size = new Size(41, 20);
+            lb1.TabIndex = 2;
+            lb1.Text = "User";
             // 
             // pictureBox1
             // 
@@ -240,7 +240,7 @@
             // 
             panel2.Controls.Add(picClose);
             panel2.Controls.Add(pictureBox2);
-            panel2.Controls.Add(label2);
+            panel2.Controls.Add(lbName);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(208, 0);
             panel2.Name = "panel2";
@@ -267,16 +267,16 @@
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
-            // label2
+            // lbName
             // 
-            label2.Font = new Font("Century Schoolbook", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(53, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(77, 38);
-            label2.TabIndex = 3;
-            label2.Text = "Name";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            lbName.Font = new Font("Century Schoolbook", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lbName.ForeColor = Color.White;
+            lbName.Location = new Point(53, 9);
+            lbName.Name = "lbName";
+            lbName.Size = new Size(77, 38);
+            lbName.TabIndex = 3;
+            lbName.Text = "Name";
+            lbName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // panelMain
             // 
@@ -320,7 +320,7 @@
             lblDashboard.ForeColor = Color.White;
             lblDashboard.Location = new Point(53, 7);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(267, 35);
+            lblDashboard.Size = new Size(213, 30);
             lblDashboard.TabIndex = 2;
             lblDashboard.Text = "Bird Farm Shop";
             // 
@@ -338,7 +338,7 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
             ClientSize = new Size(1200, 700);
@@ -353,6 +353,7 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MainForm";
+            Load += MainForm_Load;
             panelSlide.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -376,12 +377,12 @@
         private Button btnOProduct;
         private Button btnNTran;
         private Panel panel1;
-        private Label lbName;
+        private Label lb1;
         private PictureBox pictureBox1;
         private Panel panel3;
         private Panel panelSlide1;
         private Panel panel2;
-        private Label label2;
+        private Label lbName;
         private Panel panelMain;
         private Button btnChangePassword;
         private PictureBox pictureBox2;
