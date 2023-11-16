@@ -41,15 +41,22 @@ namespace Bird_Farm_Shop
             var account = _accountService.GetAccount(txtUsername.Text, txtPassword.Text);
             if (account != null)
             {
-                if (account.Role == 1)
+                if (account.Actice == 1)
                 {
-                    AdministratorForm administratorForm = new AdministratorForm(account.Id);
-                    administratorForm.Show();
-                    this.Hide();
-                }
-                if (account.Role == 2)
-                {
+                    if (account.Role == 1)
+                    {
+                        AdministratorForm administratorForm = new AdministratorForm(account.Id);
+                        administratorForm.Show();
+                        this.Hide();
+                    }
+                    if (account.Role == 2)
+                    {
 
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Your account has been locked, please contact administrator!!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

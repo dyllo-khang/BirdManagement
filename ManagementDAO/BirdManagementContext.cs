@@ -32,7 +32,7 @@ namespace ManagementDAO
                 optionsBuilder.UseSqlServer(GetConnectionString());
             }
         }
-        
+
         protected string GetConnectionString()
         {
             var builder = new ConfigurationBuilder()
@@ -41,6 +41,7 @@ namespace ManagementDAO
             IConfiguration configuration = builder.Build();
             return configuration.GetConnectionString("DbContext");
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>(entity =>
@@ -59,6 +60,8 @@ namespace ManagementDAO
                 entity.ToTable("Bill");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Checked).HasColumnName("checked");
 
                 entity.Property(e => e.CustomerId).HasColumnName("CustomerID");
 
@@ -102,6 +105,8 @@ namespace ManagementDAO
                     .HasColumnName("ID");
 
                 entity.Property(e => e.Address).HasMaxLength(50);
+
+                entity.Property(e => e.Email).HasMaxLength(50);
 
                 entity.Property(e => e.Name).HasMaxLength(50);
 

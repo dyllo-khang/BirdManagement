@@ -17,13 +17,13 @@ namespace Bird_Farm_Shop
     {
         private Form FormChild;
         private int id;
-        IAccountService _accountService;
+        ICustomerService _customerService;
         public AdministratorForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            _accountService = new AccountService();
-            lbName.Text = _accountService.GetAlll().SingleOrDefault(a => a.Id == id).Customer.Name;
+            _customerService = new CustomerService();
+            lbName.Text = _customerService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
         }
 
         private void picClose_Click(object sender, EventArgs e)
