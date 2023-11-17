@@ -139,7 +139,7 @@ namespace Bird_Farm_Shop
             {
                 OpenForm(new ProductForm());
             }
-            else OpenForm(new OfflineShoppingForm());
+            else OpenForm(new OfflineShoppingForm(this.id));
         }
 
         private void picClose_Click_1(object sender, EventArgs e)
@@ -179,7 +179,7 @@ namespace Bird_Farm_Shop
         {
             hideSubmenu();
             slide(btnShopping);
-            OpenForm(new OfflineShoppingForm());
+            OpenForm(new OfflineShoppingForm(this.id));
         }
     }
 }
