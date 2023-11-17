@@ -80,7 +80,7 @@ namespace BirdManagement
                 return;
             }
             float price = float.Parse(txtPrice.Text);
-            string resultIPrice = ValidateHelper.ValidateNumber("Imported Price", txtImPrice.Text);
+            string resultIPrice = ValidateHelper.ValidateNumber("Import Price", txtImPrice.Text);
             if (resultIPrice != null)
             {
                 MessageBox.Show(resultIPrice, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -143,8 +143,26 @@ namespace BirdManagement
         {
             Product product = new Product();
             product.Id = int.Parse(txtID.Text);
+            string resultName = ValidateHelper.ValidateFullName(txtName.Text);
+            if (resultName != null)
+            {
+                MessageBox.Show(resultName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             product.Name = txtName.Text;
+            string resultPrice = ValidateHelper.ValidateNumber("Sale Price", txtPrice.Text);
+            if (resultPrice != null)
+            {
+                MessageBox.Show(resultPrice, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             product.Price = float.Parse(txtPrice.Text);
+            string resultIPrice = ValidateHelper.ValidateNumber("Import Price", txtImPrice.Text);
+            if (resultIPrice != null)
+            {
+                MessageBox.Show(resultIPrice, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             product.ImportPrice = float.Parse(txtImPrice.Text);
             product.Quantity = int.Parse(udQuantity.Value.ToString());
             product.TypeId = int.Parse(cbxType.SelectedValue.ToString());

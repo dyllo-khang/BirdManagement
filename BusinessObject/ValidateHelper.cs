@@ -68,7 +68,7 @@ namespace BusinessObject
         {
             string pattern = @"^\d*\.?\d+$";
             if (string.IsNullOrWhiteSpace(number)) return $"{msg} can not be null...";
-            if (!Regex.IsMatch(number, pattern)) return "Must be number...";
+            if (!Regex.IsMatch(number, pattern)) return $"{msg} Must be number...";
             return null;
         }
     }
