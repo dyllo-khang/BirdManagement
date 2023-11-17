@@ -109,7 +109,7 @@
             dgvProduct.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvProduct.BackgroundColor = Color.White;
             dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvProduct.Location = new Point(0, 64);
+            dgvProduct.Location = new Point(2, 52);
             dgvProduct.Name = "dgvProduct";
             dgvProduct.RowHeadersVisible = false;
             dgvProduct.RowHeadersWidth = 82;
@@ -121,10 +121,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Century Schoolbook", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(388, 21);
+            label1.Font = new Font("Century Schoolbook", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 70, 160);
+            label1.Location = new Point(390, 9);
             label1.Name = "label1";
-            label1.Size = new Size(208, 25);
+            label1.Size = new Size(189, 23);
             label1.TabIndex = 4;
             label1.Text = "Bird Management";
             // 

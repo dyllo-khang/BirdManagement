@@ -134,10 +134,8 @@ D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\Bird_Farm_Shop.AdministratorForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.BillsPreviewForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.ChangePasswordForm.resources
-D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.CreateAccountForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\Bird_Farm_Shop.Login.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.MainForm.resources
-D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.ManageBillsForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.ManageOrdersForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.NewTransactionForm.resources
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.OfflineShoppingForm.resources
@@ -156,3 +154,7 @@ D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.genruntimeconfig.cache
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\ref\BirdManagement.dll
 D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.Properties.Resources.resources
+D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.ManageAccountForm.resources
+D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.ManageBillsForm.resources
+D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.OrderPreviewForm.resources
+D:\PRN211\BirdManagement\BirdManagement\obj\Debug\net6.0-windows\BirdManagement.AccountPropertiesForm.resources

@@ -39,5 +39,22 @@ namespace ManagementDAO
                 return context.Accounts.Include(a => a.AccountDetail).ToList();
             }
         }
+
+        public bool AddAcount(Account account)
+        {
+            try
+            {
+                using(var context = new BirdManagementContext())
+                {
+                    context.Accounts.Add(account);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

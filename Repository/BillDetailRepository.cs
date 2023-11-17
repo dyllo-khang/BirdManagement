@@ -11,5 +11,7 @@ namespace Repository
     public class BillDetailRepository : IBillDetailRepository
     {
         public bool AddBillDetail(BillDescription billDetail) => BillDetailDAO.Instance.AddBillDetail(billDetail);
+
+        public List<BillDescription> GetAll() => BillDetailDAO.Instance.GetAll();
     }
 }

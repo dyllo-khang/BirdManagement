@@ -10,11 +10,14 @@ namespace Service
 {
     public class DetailService : IDetailService
     {
-        private IDetailRepository _customerRepository;
+        private IDetailRepository detailRepository;
         public DetailService()
         {
-            _customerRepository = new DetailRepository();
+            detailRepository = new DetailRepository();
         }
-        public List<AccountDetail> GetAll() => _customerRepository.GetAll();
-            }
+
+        public bool AddAccountDetail(AccountDetail accountDetail) => detailRepository.AddAccountDetail(accountDetail);
+
+        public List<AccountDetail> GetAll() => detailRepository.GetAll();
+    }
 }

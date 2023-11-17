@@ -35,18 +35,18 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            button2 = new Button();
+            btnCancel = new Button();
             label13 = new Label();
             label12 = new Label();
-            button1 = new Button();
-            textBox7 = new TextBox();
+            btnSign = new Button();
+            txtPhone = new TextBox();
             label11 = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtEmail = new TextBox();
+            txtAddress = new TextBox();
+            txtFullName = new TextBox();
+            txtRePassword = new TextBox();
+            txtPassword = new TextBox();
+            txtUsername = new TextBox();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
@@ -120,18 +120,18 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnCancel);
             panel2.Controls.Add(label13);
             panel2.Controls.Add(label12);
-            panel2.Controls.Add(button1);
-            panel2.Controls.Add(textBox7);
+            panel2.Controls.Add(btnSign);
+            panel2.Controls.Add(txtPhone);
             panel2.Controls.Add(label11);
-            panel2.Controls.Add(textBox6);
-            panel2.Controls.Add(textBox5);
-            panel2.Controls.Add(textBox4);
-            panel2.Controls.Add(textBox3);
-            panel2.Controls.Add(textBox2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtEmail);
+            panel2.Controls.Add(txtAddress);
+            panel2.Controls.Add(txtFullName);
+            panel2.Controls.Add(txtRePassword);
+            panel2.Controls.Add(txtPassword);
+            panel2.Controls.Add(txtUsername);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label8);
@@ -146,18 +146,19 @@
             panel2.Size = new Size(475, 750);
             panel2.TabIndex = 1;
             // 
-            // button2
+            // btnCancel
             // 
-            button2.BackColor = Color.Red;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(24, 667);
-            button2.Name = "button2";
-            button2.Size = new Size(423, 42);
-            button2.TabIndex = 33;
-            button2.Text = "Cancel";
-            button2.UseVisualStyleBackColor = false;
+            btnCancel.BackColor = Color.Red;
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.FlatStyle = FlatStyle.Flat;
+            btnCancel.ForeColor = Color.White;
+            btnCancel.Location = new Point(24, 667);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(423, 42);
+            btnCancel.TabIndex = 33;
+            btnCancel.Text = "Cancel";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // label13
             // 
@@ -180,25 +181,26 @@
             label12.TabIndex = 31;
             label12.Text = "Do you have an account ?";
             // 
-            // button1
+            // btnSign
             // 
-            button1.BackColor = Color.FromArgb(0, 70, 160);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(24, 619);
-            button1.Name = "button1";
-            button1.Size = new Size(423, 42);
-            button1.TabIndex = 30;
-            button1.Text = "Sign Up";
-            button1.UseVisualStyleBackColor = false;
+            btnSign.BackColor = Color.FromArgb(0, 70, 160);
+            btnSign.FlatAppearance.BorderSize = 0;
+            btnSign.FlatStyle = FlatStyle.Flat;
+            btnSign.ForeColor = Color.White;
+            btnSign.Location = new Point(24, 619);
+            btnSign.Name = "btnSign";
+            btnSign.Size = new Size(423, 42);
+            btnSign.TabIndex = 30;
+            btnSign.Text = "Sign Up";
+            btnSign.UseVisualStyleBackColor = false;
+            btnSign.Click += btnSign_Click;
             // 
-            // textBox7
+            // txtPhone
             // 
-            textBox7.Location = new Point(24, 565);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(423, 25);
-            textBox7.TabIndex = 29;
+            txtPhone.Location = new Point(24, 565);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(423, 25);
+            txtPhone.TabIndex = 29;
             // 
             // label11
             // 
@@ -210,47 +212,47 @@
             label11.TabIndex = 28;
             label11.Text = "Phone :";
             // 
-            // textBox6
+            // txtEmail
             // 
-            textBox6.Location = new Point(24, 491);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(423, 25);
-            textBox6.TabIndex = 27;
+            txtEmail.Location = new Point(24, 491);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(423, 25);
+            txtEmail.TabIndex = 27;
             // 
-            // textBox5
+            // txtAddress
             // 
-            textBox5.Location = new Point(24, 420);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(423, 25);
-            textBox5.TabIndex = 26;
+            txtAddress.Location = new Point(24, 420);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(423, 25);
+            txtAddress.TabIndex = 26;
             // 
-            // textBox4
+            // txtFullName
             // 
-            textBox4.Location = new Point(24, 343);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(423, 25);
-            textBox4.TabIndex = 25;
+            txtFullName.Location = new Point(24, 343);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(423, 25);
+            txtFullName.TabIndex = 25;
             // 
-            // textBox3
+            // txtRePassword
             // 
-            textBox3.Location = new Point(24, 271);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(423, 25);
-            textBox3.TabIndex = 24;
+            txtRePassword.Location = new Point(24, 271);
+            txtRePassword.Name = "txtRePassword";
+            txtRePassword.Size = new Size(423, 25);
+            txtRePassword.TabIndex = 24;
             // 
-            // textBox2
+            // txtPassword
             // 
-            textBox2.Location = new Point(24, 199);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(423, 25);
-            textBox2.TabIndex = 23;
+            txtPassword.Location = new Point(24, 199);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(423, 25);
+            txtPassword.TabIndex = 23;
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(24, 127);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(423, 25);
-            textBox1.TabIndex = 22;
+            txtUsername.Location = new Point(24, 127);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(423, 25);
+            txtUsername.TabIndex = 22;
             // 
             // label10
             // 
@@ -336,6 +338,7 @@
             // 
             // RegisterForm
             // 
+            AcceptButton = btnSign;
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
@@ -366,15 +369,15 @@
         private Label label3;
         private Panel panel2;
         private Label label12;
-        private Button button1;
-        private TextBox textBox7;
+        private Button btnSign;
+        private TextBox txtPhone;
         private Label label11;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtEmail;
+        private TextBox txtAddress;
+        private TextBox txtFullName;
+        private TextBox txtRePassword;
+        private TextBox txtPassword;
+        private TextBox txtUsername;
         private Label label10;
         private Label label9;
         private Label label8;
@@ -384,6 +387,6 @@
         private PictureBox pictureBox2;
         private Label label4;
         private Label label13;
-        private Button button2;
+        private Button btnCancel;
     }
 }

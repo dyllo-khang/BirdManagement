@@ -182,6 +182,10 @@ namespace BirdManagement
                 {
                     MessageBox.Show("Purchase succesfully! Thank you...", "Notification", MessageBoxButtons.OK);
                 }
+                else
+                {
+                    MessageBox.Show("An error occurred during processing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             return;
         }

@@ -17,13 +17,16 @@ namespace Bird_Farm_Shop
     {
         private Form FormChild;
         private int id;
-        IDetailService _customerService;
+        IDetailService _detailService;
+        IAccountService _accountService;
         public AdministratorForm(int id)
         {
             InitializeComponent();
             this.id = id;
-            _customerService = new DetailService();
-            lbName.Text = _customerService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
+            _detailService = new DetailService();
+            _accountService = new AccountService();
+            lbName.Text = _detailService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
+            lbRole.Text = _accountService.GetAlll().SingleOrDefault(p => p.Id == this.id).Role == 1 ? "Administrator" : "Staff";
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -80,9 +83,9 @@ namespace Bird_Farm_Shop
             panelSlide1.Height = btn.Height;
             panelSlide1.Top = btn.Top;
         }
-        public void slide1(Panel panel) 
-        { 
-        
+        public void slide1(Panel panel)
+        {
+
         }
         #endregion panelSlide
         private void btnProduct_Click(object sender, EventArgs e)
@@ -103,14 +106,9 @@ namespace Bird_Farm_Shop
         {
             hideSubmenu();
             slide(btnManageBills);
-            OpenForm(new ManageBillsForm());
+            OpenForm(new ManageBillsForm(this.id));
         }
 
-        private void btnUserSetting_Click(object sender, EventArgs e)
-        {
-
-            showSubmenu(panelSubUser);
-        }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -130,37 +128,37 @@ namespace Bird_Farm_Shop
             OpenForm(new ProductForm());
         }
 
-        private void btnCreateAcc_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-            slide(btnCreateAcc);
-        }
-
-        private void btnUpdateAcc_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-            slide(btnUpdateAcc);
-            OpenForm(new CreateAccountForm());
-        }
-
-        private void btnChangePass_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-            slide(btnChangePass);
-        }
-
-        private void btnActAccount_Click(object sender, EventArgs e)
-        {
-            hideSubmenu();
-            slide(btnActAccount);
-        }
-
         private void picClose_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Exit Application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
+        }
+
+        private void btnManageAcc_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            OpenForm(new ManageAccountForm());
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panelSubUser);
+            slide(btnSetting);
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            OpenForm(new ChangePasswordForm(this.id));
+        }
+
+        private void btnShopping_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            slide(btnShopping);
+            OpenForm(new OfflineShoppingForm());
         }
     }
 }

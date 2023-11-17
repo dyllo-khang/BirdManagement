@@ -10,5 +10,6 @@ namespace Repository
     public interface IDetailRepository
     {
         List<AccountDetail> GetAll();
+        bool AddAccountDetail(AccountDetail accountDetail);
     }
 }

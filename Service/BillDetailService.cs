@@ -16,5 +16,7 @@ namespace Service
             _billDetailRepository = new BillDetailRepository();
         }
         public bool AddBillDetail(BillDescription billDetail) => _billDetailRepository.AddBillDetail(billDetail);
+
+        public List<BillDescription> GetAll() => _billDetailRepository.GetAll();
     }
 }

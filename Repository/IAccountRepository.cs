@@ -11,5 +11,6 @@ namespace Repository
     {
         Account GetAccount(string username, string passWord);
         List<Account> GetAlll();
+        bool AddAcount(Account account);
     }
 }

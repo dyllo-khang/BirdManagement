@@ -10,5 +10,6 @@ namespace Repository
     public interface IBillDetailRepository
     {
         bool AddBillDetail(BillDescription billDetail);
+        List<BillDescription> GetAll();
     }
 }

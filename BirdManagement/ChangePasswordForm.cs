@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace BirdManagement
 {
     public partial class ChangePasswordForm : Form
     {
-        public ChangePasswordForm()
+        private int id;
+        IDetailService _detailService;
+        public ChangePasswordForm(int id)
         {
             InitializeComponent();
+            this.id = id;
+            _detailService = new DetailService();
+            lbName.Text = _detailService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
         }
     }
 }

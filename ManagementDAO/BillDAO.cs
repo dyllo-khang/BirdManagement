@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace ManagementDAO
         {
             using (var context = new BirdManagementContext())
             {
-                return context.Bills.ToList();
+                return context.Bills.Include(b => b.Customer).ToList();
             }
         }
 

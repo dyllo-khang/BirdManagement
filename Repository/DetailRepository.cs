@@ -10,6 +10,8 @@ namespace Repository
 {
     public class DetailRepository : IDetailRepository
     {
+        public bool AddAccountDetail(AccountDetail accountDetail) => DetailDAO.Instance.AddAccountDetail(accountDetail);
         public List<AccountDetail> GetAll() => DetailDAO.Instance.GetAll();
+
     }
 }

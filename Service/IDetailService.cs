@@ -10,5 +10,6 @@ namespace Service
     public interface IDetailService
     {
         List<AccountDetail> GetAll();
+        bool AddAccountDetail(AccountDetail accountDetail);
     }
 }

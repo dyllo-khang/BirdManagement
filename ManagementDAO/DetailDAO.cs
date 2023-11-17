@@ -30,5 +30,22 @@ namespace ManagementDAO
                 return context.AccountDetails.ToList();
             }
         }
+
+        public bool AddAccountDetail(AccountDetail accountDetail)
+        {
+            try
+            {
+                using(var context = new BirdManagementContext())
+                {
+                    context.AccountDetails.Add(accountDetail);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

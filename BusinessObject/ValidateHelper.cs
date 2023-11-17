@@ -71,5 +71,21 @@ namespace BusinessObject
             if (!Regex.IsMatch(number, pattern)) return $"{msg} Must be number...";
             return null;
         }
+
+        public static string ValidatePhone(string phone)
+        {
+            string pattern = @"^\d{10}$";
+            if (string.IsNullOrWhiteSpace(phone)) return "Phone can not be null...";
+            if (!Regex.IsMatch(phone, pattern)) return "Must be number and 10 digits";
+            return null;
+        }
+
+        public static string ValidateUserName(string userName)
+        {
+            string patterm = @"^(?![0-9])[a-z0-9]{2,10}$";
+            if (string.IsNullOrWhiteSpace(userName)) return "Username can not be null...";
+            if (!Regex.IsMatch(userName, patterm)) return "Username must 6-10 characters. Dont begin with number, not contain special, capital character";
+            return null;
+        }
     }
 }

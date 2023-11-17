@@ -1,4 +1,5 @@
 ﻿using BusinessObject.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,14 @@ namespace ManagementDAO
                     instance = new BillDetailDAO();
                 }
                 return instance;
+            }
+        }
+
+        public List<BillDescription> GetAll()
+        {
+            using(var context = new BirdManagementContext())
+            {
+                return context.BillDescriptions.Include(b => b.Product).ToList();
             }
         }
 

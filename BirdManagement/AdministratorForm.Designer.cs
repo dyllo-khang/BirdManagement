@@ -30,42 +30,40 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorForm));
             panelSlide = new Panel();
-            btnDashboard = new Button();
+            btnShopping = new Button();
             panelSubUser = new Panel();
-            btnActAccount = new Button();
             btnChangePass = new Button();
-            btnUpdateAcc = new Button();
-            btnCreateAcc = new Button();
+            btnManageAcc = new Button();
             btnLogout = new Button();
-            btnUserSetting = new Button();
+            btnSetting = new Button();
             btnManageBills = new Button();
             btnManageOrders = new Button();
             btnProduct = new Button();
             panel1 = new Panel();
             lbName = new Label();
-            label1 = new Label();
+            lbRole = new Label();
             pictureBox1 = new PictureBox();
             panelSlide1 = new Panel();
             panelTitle = new Panel();
+            picClose = new PictureBox();
             lbTitle = new Label();
             panelMain = new Panel();
             panel2 = new Panel();
-            picClose = new PictureBox();
             panelSlide.SuspendLayout();
             panelSubUser.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTitle.SuspendLayout();
-            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picClose).BeginInit();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panelSlide
             // 
-            panelSlide.Controls.Add(btnDashboard);
+            panelSlide.Controls.Add(btnShopping);
             panelSlide.Controls.Add(panelSubUser);
             panelSlide.Controls.Add(btnLogout);
-            panelSlide.Controls.Add(btnUserSetting);
+            panelSlide.Controls.Add(btnSetting);
             panelSlide.Controls.Add(btnManageBills);
             panelSlide.Controls.Add(btnManageOrders);
             panelSlide.Controls.Add(btnProduct);
@@ -76,49 +74,32 @@
             panelSlide.Size = new Size(200, 700);
             panelSlide.TabIndex = 2;
             // 
-            // btnDashboard
+            // btnShopping
             // 
-            btnDashboard.Dock = DockStyle.Top;
-            btnDashboard.FlatAppearance.BorderSize = 0;
-            btnDashboard.FlatStyle = FlatStyle.Flat;
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Location = new Point(0, 585);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.Padding = new Padding(5, 0, 0, 0);
-            btnDashboard.Size = new Size(200, 50);
-            btnDashboard.TabIndex = 9;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.UseVisualStyleBackColor = true;
+            btnShopping.Dock = DockStyle.Top;
+            btnShopping.FlatAppearance.BorderSize = 0;
+            btnShopping.FlatStyle = FlatStyle.Flat;
+            btnShopping.ForeColor = Color.White;
+            btnShopping.Location = new Point(0, 480);
+            btnShopping.Name = "btnShopping";
+            btnShopping.Padding = new Padding(5, 0, 0, 0);
+            btnShopping.Size = new Size(200, 50);
+            btnShopping.TabIndex = 9;
+            btnShopping.Text = "Shopping Offline";
+            btnShopping.TextAlign = ContentAlignment.MiddleLeft;
+            btnShopping.UseVisualStyleBackColor = true;
+            btnShopping.Click += btnShopping_Click;
             // 
             // panelSubUser
             // 
             panelSubUser.BackColor = Color.FromArgb(0, 70, 200);
-            panelSubUser.Controls.Add(btnActAccount);
             panelSubUser.Controls.Add(btnChangePass);
-            panelSubUser.Controls.Add(btnUpdateAcc);
-            panelSubUser.Controls.Add(btnCreateAcc);
+            panelSubUser.Controls.Add(btnManageAcc);
             panelSubUser.Dock = DockStyle.Top;
             panelSubUser.Location = new Point(0, 380);
             panelSubUser.Name = "panelSubUser";
-            panelSubUser.Size = new Size(200, 205);
+            panelSubUser.Size = new Size(200, 100);
             panelSubUser.TabIndex = 8;
-            // 
-            // btnActAccount
-            // 
-            btnActAccount.Dock = DockStyle.Top;
-            btnActAccount.FlatAppearance.BorderSize = 0;
-            btnActAccount.FlatStyle = FlatStyle.Flat;
-            btnActAccount.ForeColor = Color.White;
-            btnActAccount.Location = new Point(0, 150);
-            btnActAccount.Name = "btnActAccount";
-            btnActAccount.Padding = new Padding(20, 0, 0, 0);
-            btnActAccount.Size = new Size(200, 55);
-            btnActAccount.TabIndex = 9;
-            btnActAccount.Text = "Active/UnActive Account";
-            btnActAccount.TextAlign = ContentAlignment.MiddleLeft;
-            btnActAccount.UseVisualStyleBackColor = true;
-            btnActAccount.Click += btnActAccount_Click;
             // 
             // btnChangePass
             // 
@@ -126,47 +107,31 @@
             btnChangePass.FlatAppearance.BorderSize = 0;
             btnChangePass.FlatStyle = FlatStyle.Flat;
             btnChangePass.ForeColor = Color.White;
-            btnChangePass.Location = new Point(0, 100);
+            btnChangePass.Location = new Point(0, 50);
             btnChangePass.Name = "btnChangePass";
             btnChangePass.Padding = new Padding(20, 0, 0, 0);
             btnChangePass.Size = new Size(200, 50);
-            btnChangePass.TabIndex = 8;
+            btnChangePass.TabIndex = 7;
             btnChangePass.Text = "Change Password";
             btnChangePass.TextAlign = ContentAlignment.MiddleLeft;
             btnChangePass.UseVisualStyleBackColor = true;
             btnChangePass.Click += btnChangePass_Click;
             // 
-            // btnUpdateAcc
+            // btnManageAcc
             // 
-            btnUpdateAcc.Dock = DockStyle.Top;
-            btnUpdateAcc.FlatAppearance.BorderSize = 0;
-            btnUpdateAcc.FlatStyle = FlatStyle.Flat;
-            btnUpdateAcc.ForeColor = Color.White;
-            btnUpdateAcc.Location = new Point(0, 50);
-            btnUpdateAcc.Name = "btnUpdateAcc";
-            btnUpdateAcc.Padding = new Padding(20, 0, 0, 0);
-            btnUpdateAcc.Size = new Size(200, 50);
-            btnUpdateAcc.TabIndex = 7;
-            btnUpdateAcc.Text = "Update Account";
-            btnUpdateAcc.TextAlign = ContentAlignment.MiddleLeft;
-            btnUpdateAcc.UseVisualStyleBackColor = true;
-            btnUpdateAcc.Click += btnUpdateAcc_Click;
-            // 
-            // btnCreateAcc
-            // 
-            btnCreateAcc.Dock = DockStyle.Top;
-            btnCreateAcc.FlatAppearance.BorderSize = 0;
-            btnCreateAcc.FlatStyle = FlatStyle.Flat;
-            btnCreateAcc.ForeColor = Color.White;
-            btnCreateAcc.Location = new Point(0, 0);
-            btnCreateAcc.Name = "btnCreateAcc";
-            btnCreateAcc.Padding = new Padding(20, 0, 0, 0);
-            btnCreateAcc.Size = new Size(200, 50);
-            btnCreateAcc.TabIndex = 6;
-            btnCreateAcc.Text = "Create Account";
-            btnCreateAcc.TextAlign = ContentAlignment.MiddleLeft;
-            btnCreateAcc.UseVisualStyleBackColor = true;
-            btnCreateAcc.Click += btnCreateAcc_Click;
+            btnManageAcc.Dock = DockStyle.Top;
+            btnManageAcc.FlatAppearance.BorderSize = 0;
+            btnManageAcc.FlatStyle = FlatStyle.Flat;
+            btnManageAcc.ForeColor = Color.White;
+            btnManageAcc.Location = new Point(0, 0);
+            btnManageAcc.Name = "btnManageAcc";
+            btnManageAcc.Padding = new Padding(20, 0, 0, 0);
+            btnManageAcc.Size = new Size(200, 50);
+            btnManageAcc.TabIndex = 6;
+            btnManageAcc.Text = "Manage Account";
+            btnManageAcc.TextAlign = ContentAlignment.MiddleLeft;
+            btnManageAcc.UseVisualStyleBackColor = true;
+            btnManageAcc.Click += btnManageAcc_Click;
             // 
             // btnLogout
             // 
@@ -184,21 +149,21 @@
             btnLogout.UseVisualStyleBackColor = true;
             btnLogout.Click += btnLogout_Click;
             // 
-            // btnUserSetting
+            // btnSetting
             // 
-            btnUserSetting.Dock = DockStyle.Top;
-            btnUserSetting.FlatAppearance.BorderSize = 0;
-            btnUserSetting.FlatStyle = FlatStyle.Flat;
-            btnUserSetting.ForeColor = Color.White;
-            btnUserSetting.Location = new Point(0, 330);
-            btnUserSetting.Name = "btnUserSetting";
-            btnUserSetting.Padding = new Padding(5, 0, 0, 0);
-            btnUserSetting.Size = new Size(200, 50);
-            btnUserSetting.TabIndex = 5;
-            btnUserSetting.Text = "User Setting";
-            btnUserSetting.TextAlign = ContentAlignment.MiddleLeft;
-            btnUserSetting.UseVisualStyleBackColor = true;
-            btnUserSetting.Click += btnUserSetting_Click;
+            btnSetting.Dock = DockStyle.Top;
+            btnSetting.FlatAppearance.BorderSize = 0;
+            btnSetting.FlatStyle = FlatStyle.Flat;
+            btnSetting.ForeColor = Color.White;
+            btnSetting.Location = new Point(0, 330);
+            btnSetting.Name = "btnSetting";
+            btnSetting.Padding = new Padding(5, 0, 0, 0);
+            btnSetting.Size = new Size(200, 50);
+            btnSetting.TabIndex = 5;
+            btnSetting.Text = "Setting";
+            btnSetting.TextAlign = ContentAlignment.MiddleLeft;
+            btnSetting.UseVisualStyleBackColor = true;
+            btnSetting.Click += btnSetting_Click;
             // 
             // btnManageBills
             // 
@@ -243,7 +208,7 @@
             btnProduct.Padding = new Padding(5, 0, 0, 0);
             btnProduct.Size = new Size(200, 50);
             btnProduct.TabIndex = 2;
-            btnProduct.Text = "Product";
+            btnProduct.Text = "Manage Product";
             btnProduct.TextAlign = ContentAlignment.MiddleLeft;
             btnProduct.UseVisualStyleBackColor = true;
             btnProduct.Click += btnProduct_Click;
@@ -251,7 +216,7 @@
             // panel1
             // 
             panel1.Controls.Add(lbName);
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lbRole);
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -265,19 +230,19 @@
             lbName.ForeColor = Color.White;
             lbName.Location = new Point(50, 122);
             lbName.Name = "lbName";
-            lbName.Size = new Size(98, 21);
+            lbName.Size = new Size(83, 20);
             lbName.TabIndex = 2;
             lbName.Text = "Username";
             // 
-            // label1
+            // lbRole
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(37, 143);
-            label1.Name = "label1";
-            label1.Size = new Size(126, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Administrator";
+            lbRole.AutoSize = true;
+            lbRole.ForeColor = Color.White;
+            lbRole.Location = new Point(37, 143);
+            lbRole.Name = "lbRole";
+            lbRole.Size = new Size(104, 20);
+            lbRole.TabIndex = 1;
+            lbRole.Text = "Administrator";
             // 
             // pictureBox1
             // 
@@ -306,6 +271,16 @@
             panelTitle.Size = new Size(974, 40);
             panelTitle.TabIndex = 3;
             // 
+            // picClose
+            // 
+            picClose.Image = (Image)resources.GetObject("picClose.Image");
+            picClose.Location = new Point(944, 0);
+            picClose.Name = "picClose";
+            picClose.Size = new Size(30, 30);
+            picClose.TabIndex = 10;
+            picClose.TabStop = false;
+            picClose.Click += picClose_Click_1;
+            // 
             // lbTitle
             // 
             lbTitle.ForeColor = Color.White;
@@ -333,19 +308,9 @@
             panel2.Size = new Size(8, 700);
             panel2.TabIndex = 5;
             // 
-            // picClose
-            // 
-            picClose.Image = (Image)resources.GetObject("picClose.Image");
-            picClose.Location = new Point(944, 0);
-            picClose.Name = "picClose";
-            picClose.Size = new Size(30, 30);
-            picClose.TabIndex = 10;
-            picClose.TabStop = false;
-            picClose.Click += picClose_Click_1;
-            // 
             // AdministratorForm
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
             ClientSize = new Size(1182, 700);
@@ -366,8 +331,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTitle.ResumeLayout(false);
-            panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picClose).EndInit();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -377,22 +342,20 @@
         private Button btnProduct;
         private Panel panel1;
         private Button btnLogout;
-        private Button btnUserSetting;
+        private Button btnSetting;
         private Button btnManageBills;
         private Button btnManageOrders;
-        private Label label1;
+        private Label lbRole;
         private PictureBox pictureBox1;
         private Panel panelSlide;
         private Panel panelTitle;
         private Label lbTitle;
         private Panel panelMain;
         private Label lbName;
-        private Button btnDashboard;
+        private Button btnShopping;
         private Panel panelSubUser;
-        private Button btnActAccount;
         private Button btnChangePass;
-        private Button btnUpdateAcc;
-        private Button btnCreateAcc;
+        private Button btnManageAcc;
         private Panel panelSlide1;
         private Panel panel2;
         private PictureBox picClose;
