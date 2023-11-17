@@ -1,4 +1,5 @@
-﻿using Service;
+﻿using Bird_Farm_Shop;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +64,7 @@ namespace BirdManagement
         private void btnBPreview_Click(object sender, EventArgs e)
         {
             slide(btnBPreview);
-            OpenForm(new BillsPreviewForm());
+            OpenForm(new BillsPreviewForm(this.id));
         }
 
         private void btnOPreview_Click(object sender, EventArgs e)
@@ -74,11 +75,18 @@ namespace BirdManagement
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
             slide(btnChangePassword);
+            OpenForm(new ChangePasswordForm(this.id));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
             slide(btnLogout);
+            if (MessageBox.Show("Logout Application?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
         }
 
         private void picClose_Click(object sender, EventArgs e)

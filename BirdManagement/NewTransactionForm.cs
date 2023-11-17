@@ -177,6 +177,7 @@ namespace BirdManagement
                 _products = _productService.GetAll();
                 LoadData();
                 listAddCart = new List<Product>();
+                dgvCart.DataSource = listAddCart;
                 Reset();
                 if(addBill && addBillDetail)
                 {

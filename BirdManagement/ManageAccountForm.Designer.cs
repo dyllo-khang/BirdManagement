@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageAccountForm));
             label1 = new Label();
-            dataGridView1 = new DataGridView();
+            dgvAccount = new DataGridView();
             label11 = new Label();
             label10 = new Label();
             label9 = new Label();
@@ -41,19 +41,18 @@
             label2 = new Label();
             button2 = new Button();
             btnProperties = new Button();
-            button3 = new Button();
-            textBox3 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox8 = new TextBox();
-            textBox4 = new TextBox();
+            txtAddress = new TextBox();
+            txtEmail = new TextBox();
+            txtPhone = new TextBox();
+            txtUsername = new TextBox();
+            txtPassword = new TextBox();
+            txtRePassword = new TextBox();
+            txtFullName = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            cbRole = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dgvAccount).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,17 +68,19 @@
             label1.TabIndex = 50;
             label1.Text = "Account Management";
             // 
-            // dataGridView1
+            // dgvAccount
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(11, 52);
-            dataGridView1.Margin = new Padding(4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(958, 204);
-            dataGridView1.TabIndex = 49;
+            dgvAccount.BackgroundColor = Color.White;
+            dgvAccount.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAccount.Location = new Point(11, 52);
+            dgvAccount.Margin = new Padding(4);
+            dgvAccount.Name = "dgvAccount";
+            dgvAccount.RowHeadersVisible = false;
+            dgvAccount.RowHeadersWidth = 51;
+            dgvAccount.RowTemplate.Height = 25;
+            dgvAccount.Size = new Size(958, 204);
+            dgvAccount.TabIndex = 49;
+            dgvAccount.CellClick += dgvAccount_CellClick;
             // 
             // label11
             // 
@@ -167,12 +168,13 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(643, 511);
+            button2.Location = new Point(729, 511);
             button2.Name = "button2";
             button2.Size = new Size(86, 45);
             button2.TabIndex = 67;
             button2.Text = "Add";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // btnProperties
             // 
@@ -180,7 +182,7 @@
             btnProperties.FlatAppearance.BorderSize = 0;
             btnProperties.FlatStyle = FlatStyle.Flat;
             btnProperties.ForeColor = Color.White;
-            btnProperties.Location = new Point(744, 511);
+            btnProperties.Location = new Point(857, 511);
             btnProperties.Name = "btnProperties";
             btnProperties.Size = new Size(112, 45);
             btnProperties.TabIndex = 68;
@@ -188,74 +190,54 @@
             btnProperties.UseVisualStyleBackColor = false;
             btnProperties.Click += btnProperties_Click;
             // 
-            // button3
+            // txtAddress
             // 
-            button3.BackColor = Color.Red;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(872, 511);
-            button3.Name = "button3";
-            button3.Size = new Size(99, 45);
-            button3.TabIndex = 69;
-            button3.Text = "Remove";
-            button3.UseVisualStyleBackColor = false;
+            txtAddress.Location = new Point(639, 274);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(331, 30);
+            txtAddress.TabIndex = 72;
             // 
-            // textBox3
+            // txtEmail
             // 
-            textBox3.Location = new Point(639, 274);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(331, 30);
-            textBox3.TabIndex = 72;
+            txtEmail.Location = new Point(639, 332);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(331, 30);
+            txtEmail.TabIndex = 73;
             // 
-            // textBox5
+            // txtPhone
             // 
-            textBox5.Location = new Point(639, 332);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(331, 30);
-            textBox5.TabIndex = 73;
+            txtPhone.Location = new Point(638, 395);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(331, 30);
+            txtPhone.TabIndex = 74;
             // 
-            // textBox6
+            // txtUsername
             // 
-            textBox6.Location = new Point(638, 395);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(331, 30);
-            textBox6.TabIndex = 74;
+            txtUsername.Location = new Point(194, 274);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(331, 30);
+            txtUsername.TabIndex = 76;
             // 
-            // textBox7
+            // txtPassword
             // 
-            textBox7.Location = new Point(638, 451);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(331, 30);
-            textBox7.TabIndex = 75;
+            txtPassword.Location = new Point(194, 332);
+            txtPassword.Name = "txtPassword";
+            txtPassword.Size = new Size(331, 30);
+            txtPassword.TabIndex = 77;
             // 
-            // textBox1
+            // txtRePassword
             // 
-            textBox1.Location = new Point(194, 274);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(331, 30);
-            textBox1.TabIndex = 76;
+            txtRePassword.Location = new Point(194, 395);
+            txtRePassword.Name = "txtRePassword";
+            txtRePassword.Size = new Size(331, 30);
+            txtRePassword.TabIndex = 78;
             // 
-            // textBox2
+            // txtFullName
             // 
-            textBox2.Location = new Point(194, 332);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(331, 30);
-            textBox2.TabIndex = 77;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(194, 395);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(331, 30);
-            textBox8.TabIndex = 78;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(194, 451);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(331, 30);
-            textBox4.TabIndex = 79;
+            txtFullName.Location = new Point(194, 451);
+            txtFullName.Name = "txtFullName";
+            txtFullName.Size = new Size(331, 30);
+            txtFullName.TabIndex = 79;
             // 
             // label3
             // 
@@ -299,22 +281,29 @@
             button4.TextAlign = ContentAlignment.MiddleRight;
             button4.UseVisualStyleBackColor = true;
             // 
+            // cbRole
+            // 
+            cbRole.FormattingEnabled = true;
+            cbRole.Location = new Point(639, 457);
+            cbRole.Name = "cbRole";
+            cbRole.Size = new Size(151, 29);
+            cbRole.TabIndex = 81;
+            // 
             // ManageAccountForm
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(982, 653);
+            Controls.Add(cbRole);
             Controls.Add(panel1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox8);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox3);
-            Controls.Add(button3);
+            Controls.Add(txtFullName);
+            Controls.Add(txtRePassword);
+            Controls.Add(txtPassword);
+            Controls.Add(txtUsername);
+            Controls.Add(txtPhone);
+            Controls.Add(txtEmail);
+            Controls.Add(txtAddress);
             Controls.Add(btnProperties);
             Controls.Add(button2);
             Controls.Add(label2);
@@ -326,14 +315,15 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvAccount);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4, 3, 4, 3);
             Name = "ManageAccountForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "MANAGE ACCOUNTS";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += ManageAccountForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvAccount).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -342,7 +332,7 @@
         #endregion
 
         private Label label1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvAccount;
         private Label label11;
         private Label label10;
         private Label label9;
@@ -353,17 +343,16 @@
         private Label label2;
         private Button button2;
         private Button btnProperties;
-        private Button button3;
-        private TextBox textBox3;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox8;
-        private TextBox textBox4;
+        private TextBox txtAddress;
+        private TextBox txtEmail;
+        private TextBox txtPhone;
+        private TextBox txtUsername;
+        private TextBox txtPassword;
+        private TextBox txtRePassword;
+        private TextBox txtFullName;
         private Label label3;
         private Panel panel1;
         private Button button4;
+        private ComboBox cbRole;
     }
 }

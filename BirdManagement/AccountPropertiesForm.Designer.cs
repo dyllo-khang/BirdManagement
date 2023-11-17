@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountPropertiesForm));
             label2 = new Label();
-            textBox4 = new TextBox();
+            txtFullname = new TextBox();
             label8 = new Label();
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            button3 = new Button();
+            cbRole = new ComboBox();
+            cbActive = new ComboBox();
+            btnApply = new Button();
             button1 = new Button();
             panel1 = new Panel();
             picClose = new PictureBox();
@@ -54,12 +54,12 @@
             label2.TabIndex = 69;
             label2.Text = "Role :";
             // 
-            // textBox4
+            // txtFullname
             // 
-            textBox4.Location = new Point(152, 97);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(493, 30);
-            textBox4.TabIndex = 68;
+            txtFullname.Location = new Point(152, 97);
+            txtFullname.Name = "txtFullname";
+            txtFullname.Size = new Size(493, 30);
+            txtFullname.TabIndex = 68;
             // 
             // label8
             // 
@@ -81,34 +81,35 @@
             label1.TabIndex = 71;
             label1.Text = "Activate :";
             // 
-            // comboBox1
+            // cbRole
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(152, 164);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(493, 29);
-            comboBox1.TabIndex = 72;
+            cbRole.FormattingEnabled = true;
+            cbRole.Location = new Point(152, 164);
+            cbRole.Name = "cbRole";
+            cbRole.Size = new Size(493, 29);
+            cbRole.TabIndex = 72;
             // 
-            // comboBox2
+            // cbActive
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(152, 231);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(493, 29);
-            comboBox2.TabIndex = 73;
+            cbActive.FormattingEnabled = true;
+            cbActive.Location = new Point(152, 231);
+            cbActive.Name = "cbActive";
+            cbActive.Size = new Size(493, 29);
+            cbActive.TabIndex = 73;
             // 
-            // button3
+            // btnApply
             // 
-            button3.BackColor = Color.FromArgb(0, 70, 160);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(406, 286);
-            button3.Name = "button3";
-            button3.Size = new Size(99, 45);
-            button3.TabIndex = 74;
-            button3.Text = "Apply";
-            button3.UseVisualStyleBackColor = false;
+            btnApply.BackColor = Color.FromArgb(0, 70, 160);
+            btnApply.FlatAppearance.BorderSize = 0;
+            btnApply.FlatStyle = FlatStyle.Flat;
+            btnApply.ForeColor = Color.White;
+            btnApply.Location = new Point(406, 286);
+            btnApply.Name = "btnApply";
+            btnApply.Size = new Size(99, 45);
+            btnApply.TabIndex = 74;
+            btnApply.Text = "Apply";
+            btnApply.UseVisualStyleBackColor = false;
+            btnApply.Click += btnApply_Click;
             // 
             // button1
             // 
@@ -122,6 +123,7 @@
             button1.TabIndex = 75;
             button1.Text = "Cancel";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // panel1
             // 
@@ -142,6 +144,7 @@
             picClose.Size = new Size(30, 29);
             picClose.TabIndex = 1;
             picClose.TabStop = false;
+            picClose.Click += picClose_Click;
             // 
             // label3
             // 
@@ -164,12 +167,12 @@
             ClientSize = new Size(682, 362);
             Controls.Add(panel1);
             Controls.Add(button1);
-            Controls.Add(button3);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(btnApply);
+            Controls.Add(cbActive);
+            Controls.Add(cbRole);
             Controls.Add(label1);
             Controls.Add(label2);
-            Controls.Add(textBox4);
+            Controls.Add(txtFullname);
             Controls.Add(label8);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -185,12 +188,12 @@
 
         #endregion
         private Label label2;
-        private TextBox textBox4;
+        private TextBox txtFullname;
         private Label label8;
         private Label label1;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Button button3;
+        private ComboBox cbRole;
+        private ComboBox cbActive;
+        private Button btnApply;
         private Button button1;
         private Panel panel1;
         private Label label3;

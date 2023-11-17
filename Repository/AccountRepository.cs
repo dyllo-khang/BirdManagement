@@ -15,5 +15,7 @@ namespace Repository
         public Account GetAccount(string username, string passWord) => AccountDAO.Instance.GetAccount(username, passWord);
 
         public List<Account> GetAlll() => AccountDAO.Instance.GetAlll();
+
+        public bool UpdateAccount(Account account) => AccountDAO.Instance.UpdateAccount(account);
     }
 }

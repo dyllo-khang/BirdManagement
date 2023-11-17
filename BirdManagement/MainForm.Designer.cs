@@ -206,7 +206,7 @@
             lb1.ForeColor = Color.White;
             lb1.Location = new Point(73, 139);
             lb1.Name = "lb1";
-            lb1.Size = new Size(41, 20);
+            lb1.Size = new Size(46, 21);
             lb1.TabIndex = 2;
             lb1.Text = "User";
             // 
@@ -273,7 +273,7 @@
             lbName.ForeColor = Color.White;
             lbName.Location = new Point(53, 9);
             lbName.Name = "lbName";
-            lbName.Size = new Size(77, 38);
+            lbName.Size = new Size(130, 38);
             lbName.TabIndex = 3;
             lbName.Text = "Name";
             lbName.TextAlign = ContentAlignment.MiddleLeft;
@@ -320,7 +320,7 @@
             lblDashboard.ForeColor = Color.White;
             lblDashboard.Location = new Point(53, 7);
             lblDashboard.Name = "lblDashboard";
-            lblDashboard.Size = new Size(213, 30);
+            lblDashboard.Size = new Size(267, 35);
             lblDashboard.TabIndex = 2;
             lblDashboard.Text = "Bird Farm Shop";
             // 
@@ -338,7 +338,7 @@
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
             ClientSize = new Size(1200, 700);

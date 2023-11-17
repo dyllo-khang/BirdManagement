@@ -27,6 +27,7 @@ namespace Bird_Farm_Shop
             _accountService = new AccountService();
             lbName.Text = _detailService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
             lbRole.Text = _accountService.GetAlll().SingleOrDefault(p => p.Id == this.id).Role == 1 ? "Administrator" : "Staff";
+            btnProduct.Enabled = _accountService.GetAlll().SingleOrDefault(p => p.Id == this.id).Role == 1 ? true : false;
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -125,7 +126,11 @@ namespace Bird_Farm_Shop
 
         private void AdministratorForm_Load(object sender, EventArgs e)
         {
-            OpenForm(new ProductForm());
+            if (this.id == 1)
+            {
+                OpenForm(new ProductForm());
+            }
+            else OpenForm(new OfflineShoppingForm());
         }
 
         private void picClose_Click_1(object sender, EventArgs e)
@@ -139,7 +144,14 @@ namespace Bird_Farm_Shop
         private void btnManageAcc_Click(object sender, EventArgs e)
         {
             hideSubmenu();
-            OpenForm(new ManageAccountForm());
+            if (this.id == 1)
+            {
+                OpenForm(new ManageAccountForm());
+            }
+            else
+            {
+                MessageBox.Show("Access denied!!! You dont have permision", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
