@@ -17,6 +17,7 @@ namespace Bird_Farm_Shop
     {
         private Form FormChild;
         private int id;
+        private int role;
         IDetailService _detailService;
         IAccountService _accountService;
         public AdministratorForm(int id)
@@ -27,6 +28,7 @@ namespace Bird_Farm_Shop
             _accountService = new AccountService();
             lbName.Text = _detailService.GetAll().SingleOrDefault(p => p.Id == this.id).Name;
             lbRole.Text = _accountService.GetAlll().SingleOrDefault(p => p.Id == this.id).Role == 1 ? "Administrator" : "Staff";
+            role = (int)_accountService.GetAlll().SingleOrDefault(x => x.Id == id).Role;
             btnProduct.Enabled = _accountService.GetAlll().SingleOrDefault(p => p.Id == this.id).Role == 1 ? true : false;
         }
 
@@ -107,7 +109,14 @@ namespace Bird_Farm_Shop
         {
             hideSubmenu();
             slide(btnManageBills);
-            OpenForm(new ManageBillsForm(this.id));
+            if(role == 1)
+            {
+                OpenForm(new ManageBillsForm());
+            }
+            else
+            {
+                OpenForm(new BillsPreviewForm(this.id));
+            }
         }
 
 

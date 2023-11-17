@@ -28,40 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button5 = new Button();
-            dateTimePicker2 = new DateTimePicker();
+            btnSearch = new Button();
+            dtpTo = new DateTimePicker();
             label15 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFrom = new DateTimePicker();
             label14 = new Label();
-            dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
+            dgvBillDetail = new DataGridView();
+            dgvBill = new DataGridView();
             label17 = new Label();
             label16 = new Label();
             label1 = new Label();
-            label2 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lbTotalPrice = new Label();
+            ((System.ComponentModel.ISupportInitialize)dgvBillDetail).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBill).BeginInit();
             SuspendLayout();
             // 
-            // button5
+            // btnSearch
             // 
-            button5.BackColor = Color.FromArgb(0, 70, 160);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(781, 558);
-            button5.Name = "button5";
-            button5.Size = new Size(94, 29);
-            button5.TabIndex = 13;
-            button5.Text = "Search";
-            button5.UseVisualStyleBackColor = false;
+            btnSearch.BackColor = Color.FromArgb(0, 70, 160);
+            btnSearch.FlatAppearance.BorderSize = 0;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.ForeColor = Color.White;
+            btnSearch.Location = new Point(781, 558);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(94, 29);
+            btnSearch.TabIndex = 13;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
-            // dateTimePicker2
+            // dtpTo
             // 
-            dateTimePicker2.Location = new Point(459, 558);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(215, 30);
-            dateTimePicker2.TabIndex = 12;
+            dtpTo.Location = new Point(459, 558);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(215, 30);
+            dtpTo.TabIndex = 12;
             // 
             // label15
             // 
@@ -72,12 +73,12 @@
             label15.TabIndex = 11;
             label15.Text = "To";
             // 
-            // dateTimePicker1
+            // dtpFrom
             // 
-            dateTimePicker1.Location = new Point(202, 558);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(215, 30);
-            dateTimePicker1.TabIndex = 10;
+            dtpFrom.Location = new Point(202, 558);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(215, 30);
+            dtpFrom.TabIndex = 10;
             // 
             // label14
             // 
@@ -88,27 +89,28 @@
             label14.TabIndex = 9;
             label14.Text = "Filter By Date : From";
             // 
-            // dataGridView2
+            // dgvBillDetail
             // 
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(556, 66);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.RowTemplate.Height = 29;
-            dataGridView2.Size = new Size(414, 217);
-            dataGridView2.TabIndex = 55;
+            dgvBillDetail.BackgroundColor = Color.White;
+            dgvBillDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBillDetail.Location = new Point(556, 66);
+            dgvBillDetail.Name = "dgvBillDetail";
+            dgvBillDetail.RowHeadersWidth = 51;
+            dgvBillDetail.RowTemplate.Height = 29;
+            dgvBillDetail.Size = new Size(414, 217);
+            dgvBillDetail.TabIndex = 55;
             // 
-            // dataGridView1
+            // dgvBill
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 66);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(522, 217);
-            dataGridView1.TabIndex = 53;
+            dgvBill.BackgroundColor = Color.White;
+            dgvBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvBill.Location = new Point(12, 66);
+            dgvBill.Name = "dgvBill";
+            dgvBill.RowHeadersWidth = 51;
+            dgvBill.RowTemplate.Height = 29;
+            dgvBill.Size = new Size(522, 217);
+            dgvBill.TabIndex = 53;
+            dgvBill.CellContentClick += dgvBill_CellClick;
             // 
             // label17
             // 
@@ -139,14 +141,14 @@
             label1.TabIndex = 58;
             label1.Text = "Total :";
             // 
-            // label2
+            // lbTotalPrice
             // 
-            label2.Location = new Point(373, 319);
-            label2.Name = "label2";
-            label2.Size = new Size(161, 21);
-            label2.TabIndex = 59;
-            label2.Text = "0.00";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            lbTotalPrice.Location = new Point(373, 319);
+            lbTotalPrice.Name = "lbTotalPrice";
+            lbTotalPrice.Size = new Size(161, 21);
+            lbTotalPrice.TabIndex = 59;
+            lbTotalPrice.Text = "0.00";
+            lbTotalPrice.TextAlign = ContentAlignment.MiddleRight;
             // 
             // BillsPreviewForm
             // 
@@ -154,16 +156,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(982, 600);
-            Controls.Add(label2);
+            Controls.Add(lbTotalPrice);
             Controls.Add(label1);
             Controls.Add(label17);
             Controls.Add(label16);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
-            Controls.Add(button5);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dgvBillDetail);
+            Controls.Add(dgvBill);
+            Controls.Add(btnSearch);
+            Controls.Add(dtpTo);
             Controls.Add(label15);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFrom);
             Controls.Add(label14);
             Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             FormBorderStyle = FormBorderStyle.None;
@@ -171,23 +173,24 @@
             Name = "BillsPreviewForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BillsPreviewForm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += BillsPreviewForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvBillDetail).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvBill).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button button5;
-        private DateTimePicker dateTimePicker2;
+        private Button btnSearch;
+        private DateTimePicker dtpTo;
         private Label label15;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFrom;
         private Label label14;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
+        private DataGridView dgvBillDetail;
+        private DataGridView dgvBill;
         private Label label17;
         private Label label16;
         private Label label1;
-        private Label label2;
+        private Label lbTotalPrice;
     }
 }

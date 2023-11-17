@@ -22,17 +22,14 @@ namespace BirdManagement
         List<Bill> _listBill;
         List<BillDescription> _listBillDetail;
         List<AccountDetail> _listAccountDetail;
-        private int id;
-        private int role;
-        public ManageBillsForm(int id)
+        
+        public ManageBillsForm()
         {
             InitializeComponent();
-            this.id = id;
             _accountService = new AccountService();
             _billService = new BillService();
             _billDetailService = new BillDetailService();
             _detailService = new DetailService();
-            role = (int)_accountService.GetAlll().SingleOrDefault(x => x.Id == id).Role;
             _listBill = _billService.GetAllBill();
             _listBillDetail = _billDetailService.GetAll();
             _listAccountDetail = _detailService.GetAll();
@@ -45,8 +42,6 @@ namespace BirdManagement
 
         protected void LoadData()
         {
-            if (role == 1)
-            {
                 dgvBill.DataSource = _listBill.OrderByDescending(x => x.DateCheckOut).Select(x => new
                 {
                     x.Id,
@@ -68,11 +63,6 @@ namespace BirdManagement
                     sumProfit = sumProfit + (float)((float)(billDetail.Price - billDetail.ImportPrice) * billDetail.Quantity);
                 }
                 lbTotalProfit.Text = $"{sumProfit} VND";
-            }
-            if (role == 3)
-            {
-
-            }
         }
 
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
