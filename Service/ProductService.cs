@@ -20,6 +20,8 @@ namespace Service
 
         public List<Product> GetAll(string search = "") => _productRepository.GetAll(search);
 
+        public Product GetProductByID(int? id) => _productRepository.GetProductByID(id);
+
         public bool UpdateProduct(Product product) => _productRepository.UpdateProduct(product);
 
     }

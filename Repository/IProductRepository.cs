@@ -10,6 +10,7 @@ namespace Repository
     public interface IProductRepository
     {
         List<Product> GetAll(string search = "");
+        Product GetProductByID(int? id);
         bool AddProduct(Product product);
         bool UpdateProduct(Product product);
     }

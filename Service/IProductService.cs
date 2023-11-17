@@ -10,6 +10,7 @@ namespace Service
     public interface IProductService
     {
         List<Product> GetAll(string search = "");
+        Product GetProductByID(int? id);
         bool AddProduct(Product product);
         bool UpdateProduct(Product product);
     }

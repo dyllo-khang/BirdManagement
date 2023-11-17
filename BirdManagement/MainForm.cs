@@ -51,7 +51,7 @@ namespace BirdManagement
         private void btnNTran_Click(object sender, EventArgs e)
         {
             slide(btnNTran);
-            OpenForm(new NewTransactionForm());
+            OpenForm(new NewTransactionForm(this.id));
         }
 
         private void btnOProduct_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace BirdManagement
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            OpenForm(new NewTransactionForm());
+            OpenForm(new NewTransactionForm(this.id));
         }
     }
 }

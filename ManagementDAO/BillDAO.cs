@@ -23,5 +23,30 @@ namespace ManagementDAO
                 return instance;
             }
         }
+
+        public List<Bill> GetAllBill()
+        {
+            using (var context = new BirdManagementContext())
+            {
+                return context.Bills.ToList();
+            }
+        }
+
+        public bool AddBill(Bill bill)
+        {
+            try
+            {
+                using(var context = new BirdManagementContext())
+                {
+                    context.Bills.Add(bill);
+                    context.SaveChanges();
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

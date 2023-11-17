@@ -34,6 +34,14 @@ namespace ManagementDAO
             }
         }
 
+        public Product GetProductByID(int? id)
+        {
+            using(var context = new BirdManagementContext())
+            {
+                return context.Products.FirstOrDefault(p => p.Id == id);
+            }
+        }
+
         public bool AddProduct(Product product)
         {
             try

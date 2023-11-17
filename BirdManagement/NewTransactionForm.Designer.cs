@@ -218,7 +218,7 @@
             btnSearch.TabIndex = 31;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
-            btnSearch.Click += button2_Click;
+            btnSearch.Click += btnSearch_Click;
             // 
             // txtSearch
             // 
@@ -242,6 +242,7 @@
             dgvCart.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCart.Location = new Point(556, 67);
             dgvCart.Name = "dgvCart";
+            dgvCart.RowHeadersVisible = false;
             dgvCart.RowHeadersWidth = 51;
             dgvCart.RowTemplate.Height = 29;
             dgvCart.Size = new Size(414, 188);
@@ -273,6 +274,7 @@
             dgvProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvProduct.Location = new Point(9, 67);
             dgvProduct.Name = "dgvProduct";
+            dgvProduct.RowHeadersVisible = false;
             dgvProduct.RowHeadersWidth = 51;
             dgvProduct.RowTemplate.Height = 29;
             dgvProduct.Size = new Size(522, 188);
