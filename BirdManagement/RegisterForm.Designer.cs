@@ -82,7 +82,7 @@
             label3.ForeColor = Color.White;
             label3.Location = new Point(108, 486);
             label3.Name = "label3";
-            label3.Size = new Size(204, 24);
+            label3.Size = new Size(252, 30);
             label3.TabIndex = 3;
             label3.Text = "and by its motivation";
             // 
@@ -93,7 +93,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(32, 446);
             label2.Name = "label2";
-            label2.Size = new Size(324, 24);
+            label2.Size = new Size(405, 30);
             label2.TabIndex = 2;
             label2.Text = "The bird is powered by its own life ";
             // 
@@ -167,9 +167,10 @@
             label13.ForeColor = Color.Red;
             label13.Location = new Point(305, 719);
             label13.Name = "label13";
-            label13.Size = new Size(93, 18);
+            label13.Size = new Size(110, 22);
             label13.TabIndex = 32;
             label13.Text = "Click here !";
+            label13.Click += label13_Click;
             // 
             // label12
             // 
@@ -177,7 +178,7 @@
             label12.ForeColor = Color.FromArgb(0, 70, 160);
             label12.Location = new Point(48, 720);
             label12.Name = "label12";
-            label12.Size = new Size(207, 20);
+            label12.Size = new Size(251, 21);
             label12.TabIndex = 31;
             label12.Text = "Do you have an account ?";
             // 
@@ -199,7 +200,7 @@
             // 
             txtPhone.Location = new Point(24, 565);
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(423, 25);
+            txtPhone.Size = new Size(423, 30);
             txtPhone.TabIndex = 29;
             // 
             // label11
@@ -208,7 +209,7 @@
             label11.ForeColor = Color.FromArgb(0, 70, 160);
             label11.Location = new Point(24, 541);
             label11.Name = "label11";
-            label11.Size = new Size(64, 20);
+            label11.Size = new Size(77, 21);
             label11.TabIndex = 28;
             label11.Text = "Phone :";
             // 
@@ -216,42 +217,42 @@
             // 
             txtEmail.Location = new Point(24, 491);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(423, 25);
+            txtEmail.Size = new Size(423, 30);
             txtEmail.TabIndex = 27;
             // 
             // txtAddress
             // 
             txtAddress.Location = new Point(24, 420);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(423, 25);
+            txtAddress.Size = new Size(423, 30);
             txtAddress.TabIndex = 26;
             // 
             // txtFullName
             // 
             txtFullName.Location = new Point(24, 343);
             txtFullName.Name = "txtFullName";
-            txtFullName.Size = new Size(423, 25);
+            txtFullName.Size = new Size(423, 30);
             txtFullName.TabIndex = 25;
             // 
             // txtRePassword
             // 
             txtRePassword.Location = new Point(24, 271);
             txtRePassword.Name = "txtRePassword";
-            txtRePassword.Size = new Size(423, 25);
+            txtRePassword.Size = new Size(423, 30);
             txtRePassword.TabIndex = 24;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(24, 199);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(423, 25);
+            txtPassword.Size = new Size(423, 30);
             txtPassword.TabIndex = 23;
             // 
             // txtUsername
             // 
             txtUsername.Location = new Point(24, 127);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(423, 25);
+            txtUsername.Size = new Size(423, 30);
             txtUsername.TabIndex = 22;
             // 
             // label10
@@ -260,7 +261,7 @@
             label10.ForeColor = Color.FromArgb(0, 70, 160);
             label10.Location = new Point(24, 467);
             label10.Name = "label10";
-            label10.Size = new Size(54, 20);
+            label10.Size = new Size(65, 21);
             label10.TabIndex = 21;
             label10.Text = "Email :";
             // 
@@ -270,7 +271,7 @@
             label9.ForeColor = Color.FromArgb(0, 70, 160);
             label9.Location = new Point(24, 396);
             label9.Name = "label9";
-            label9.Size = new Size(75, 20);
+            label9.Size = new Size(90, 21);
             label9.TabIndex = 20;
             label9.Text = "Address :";
             // 
@@ -280,7 +281,7 @@
             label8.ForeColor = Color.FromArgb(0, 70, 160);
             label8.Location = new Point(24, 319);
             label8.Name = "label8";
-            label8.Size = new Size(81, 20);
+            label8.Size = new Size(98, 21);
             label8.TabIndex = 19;
             label8.Text = "Fullname :";
             // 
@@ -290,7 +291,7 @@
             label7.ForeColor = Color.FromArgb(0, 70, 160);
             label7.Location = new Point(24, 247);
             label7.Name = "label7";
-            label7.Size = new Size(148, 20);
+            label7.Size = new Size(176, 21);
             label7.TabIndex = 18;
             label7.Text = "Re-type Password :";
             // 
@@ -300,7 +301,7 @@
             label6.ForeColor = Color.FromArgb(0, 70, 160);
             label6.Location = new Point(24, 175);
             label6.Name = "label6";
-            label6.Size = new Size(87, 20);
+            label6.Size = new Size(100, 21);
             label6.TabIndex = 17;
             label6.Text = "Password :";
             // 
@@ -310,7 +311,7 @@
             label5.ForeColor = Color.FromArgb(0, 70, 160);
             label5.Location = new Point(24, 103);
             label5.Name = "label5";
-            label5.Size = new Size(91, 20);
+            label5.Size = new Size(108, 21);
             label5.TabIndex = 16;
             label5.Text = "Username :";
             // 
@@ -332,14 +333,14 @@
             label4.ForeColor = Color.FromArgb(0, 70, 160);
             label4.Location = new Point(24, 45);
             label4.Name = "label4";
-            label4.Size = new Size(91, 26);
+            label4.Size = new Size(116, 34);
             label4.TabIndex = 14;
             label4.Text = "Sign Up";
             // 
             // RegisterForm
             // 
             AcceptButton = btnSign;
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(950, 750);

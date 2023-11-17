@@ -47,14 +47,14 @@ namespace BirdManagement
         {
             if (role == 1)
             {
-                dgvBill.DataSource = _listBill.Select(x => new
+                dgvBill.DataSource = _listBill.OrderByDescending(x => x.DateCheckOut).Select(x => new
                 {
                     x.Id,
                     Customer = x.Customer.Name,
                     Cashier = _listAccountDetail.SingleOrDefault(a => a.Id == x.StaffId)?.Name ?? "Online Shopping",
                     x.DateCheckOut,
                     x.Total
-                }).ToList();
+                }).OrderByDescending(x => x.DateCheckOut).ToList();
                 float sumPrice = 0;
                 foreach (DataGridViewRow row in dgvBill.Rows)
                 {
@@ -91,6 +91,43 @@ namespace BirdManagement
                     Profit = (x.Price - x.ImportPrice) * x.Quantity
                 }).ToList();
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(dtpFrom.Value.Date > dtpTo.Value.Date)
+            {
+                MessageBox.Show("Please choose Date From smaller than Date To", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            var listSearch = _listBill.Where(x => x.DateCheckOut >= dtpFrom.Value.Date && x.DateCheckOut <= dtpTo.Value.Date).ToList();
+            dgvBill.DataSource = listSearch.Select(x => new
+            {
+                x.Id,
+                Customer = x.Customer.Name,
+                Cashier = _listAccountDetail.SingleOrDefault(p => p.Id == x.StaffId)?.Name ?? "Online Shopping",
+                x.DateCheckOut,
+                x.Total
+            }).OrderByDescending(x => x.DateCheckOut).ToList();
+            float sumPrice = 0;
+            foreach (DataGridViewRow row in dgvBill.Rows)
+            {
+                float price = float.Parse(row.Cells["Total"].Value.ToString());
+                sumPrice += price;
+            }
+            float sumProfit = 0;
+            lbTotalPrice.Text = $"{sumPrice} VND";
+            foreach (DataGridViewRow row in dgvBill.Rows)
+            {
+                int billID = int.Parse(row.Cells["Id"].Value.ToString());
+                var listDetailSearch = _listBillDetail.Where(x => x.BillId == billID).ToList();
+                foreach (BillDescription billDetail in listDetailSearch)
+                {
+                    sumProfit = sumProfit + (float)((float)(billDetail.Price - billDetail.ImportPrice) * billDetail.Quantity);
+                }
+            }
+            lbTotalProfit.Text = $"{sumProfit} VND";
+            dgvBillDetail.DataSource = new List<BillDescription>();
         }
     }
 }

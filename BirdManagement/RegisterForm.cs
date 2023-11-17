@@ -1,4 +1,5 @@
-﻿using BusinessObject;
+﻿using Bird_Farm_Shop;
+using BusinessObject;
 using BusinessObject.Models;
 using Service;
 using System;
@@ -115,7 +116,7 @@ namespace BirdManagement
                 }
                 accountDetail.Phone = txtPhone.Text;
                 bool addAccount = _accountService.AddAcount(account);
-                accountDetail.Id =account.Id;
+                accountDetail.Id = account.Id;
                 bool addAccountDetail = _detailService.AddAccountDetail(accountDetail);
                 if (addAccount && addAccountDetail)
                 {
@@ -126,6 +127,11 @@ namespace BirdManagement
                     MessageBox.Show("Register failed!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

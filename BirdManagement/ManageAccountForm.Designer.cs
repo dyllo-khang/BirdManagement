@@ -65,7 +65,7 @@
             label1.Location = new Point(354, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(226, 23);
+            label1.Size = new Size(273, 27);
             label1.TabIndex = 50;
             label1.Text = "Account Management";
             // 
@@ -87,7 +87,7 @@
             label11.ForeColor = Color.FromArgb(0, 70, 160);
             label11.Location = new Point(543, 404);
             label11.Name = "label11";
-            label11.Size = new Size(64, 20);
+            label11.Size = new Size(77, 21);
             label11.TabIndex = 63;
             label11.Text = "Phone :";
             // 
@@ -97,7 +97,7 @@
             label10.ForeColor = Color.FromArgb(0, 70, 160);
             label10.Location = new Point(543, 341);
             label10.Name = "label10";
-            label10.Size = new Size(54, 20);
+            label10.Size = new Size(65, 21);
             label10.TabIndex = 56;
             label10.Text = "Email :";
             // 
@@ -107,7 +107,7 @@
             label9.ForeColor = Color.FromArgb(0, 70, 160);
             label9.Location = new Point(543, 283);
             label9.Name = "label9";
-            label9.Size = new Size(75, 20);
+            label9.Size = new Size(90, 21);
             label9.TabIndex = 55;
             label9.Text = "Address :";
             // 
@@ -117,7 +117,7 @@
             label8.ForeColor = Color.FromArgb(0, 70, 160);
             label8.Location = new Point(10, 460);
             label8.Name = "label8";
-            label8.Size = new Size(81, 20);
+            label8.Size = new Size(98, 21);
             label8.TabIndex = 54;
             label8.Text = "Fullname :";
             // 
@@ -127,7 +127,7 @@
             label7.ForeColor = Color.FromArgb(0, 70, 160);
             label7.Location = new Point(12, 404);
             label7.Name = "label7";
-            label7.Size = new Size(148, 20);
+            label7.Size = new Size(176, 21);
             label7.TabIndex = 53;
             label7.Text = "Re-type Password :";
             // 
@@ -137,7 +137,7 @@
             label6.ForeColor = Color.FromArgb(0, 70, 160);
             label6.Location = new Point(12, 341);
             label6.Name = "label6";
-            label6.Size = new Size(87, 20);
+            label6.Size = new Size(100, 21);
             label6.TabIndex = 52;
             label6.Text = "Password :";
             // 
@@ -147,7 +147,7 @@
             label5.ForeColor = Color.FromArgb(0, 70, 160);
             label5.Location = new Point(10, 283);
             label5.Name = "label5";
-            label5.Size = new Size(91, 20);
+            label5.Size = new Size(108, 21);
             label5.TabIndex = 51;
             label5.Text = "Username :";
             // 
@@ -157,7 +157,7 @@
             label2.ForeColor = Color.FromArgb(0, 70, 160);
             label2.Location = new Point(543, 460);
             label2.Name = "label2";
-            label2.Size = new Size(49, 20);
+            label2.Size = new Size(58, 21);
             label2.TabIndex = 65;
             label2.Text = "Role :";
             // 
@@ -205,56 +205,56 @@
             // 
             textBox3.Location = new Point(639, 274);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(331, 25);
+            textBox3.Size = new Size(331, 30);
             textBox3.TabIndex = 72;
             // 
             // textBox5
             // 
             textBox5.Location = new Point(639, 332);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(331, 25);
+            textBox5.Size = new Size(331, 30);
             textBox5.TabIndex = 73;
             // 
             // textBox6
             // 
             textBox6.Location = new Point(638, 395);
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(331, 25);
+            textBox6.Size = new Size(331, 30);
             textBox6.TabIndex = 74;
             // 
             // textBox7
             // 
             textBox7.Location = new Point(638, 451);
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(331, 25);
+            textBox7.Size = new Size(331, 30);
             textBox7.TabIndex = 75;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(194, 274);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(331, 25);
+            textBox1.Size = new Size(331, 30);
             textBox1.TabIndex = 76;
             // 
             // textBox2
             // 
             textBox2.Location = new Point(194, 332);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(331, 25);
+            textBox2.Size = new Size(331, 30);
             textBox2.TabIndex = 77;
             // 
             // textBox8
             // 
             textBox8.Location = new Point(194, 395);
             textBox8.Name = "textBox8";
-            textBox8.Size = new Size(331, 25);
+            textBox8.Size = new Size(331, 30);
             textBox8.TabIndex = 78;
             // 
             // textBox4
             // 
             textBox4.Location = new Point(194, 451);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(331, 25);
+            textBox4.Size = new Size(331, 30);
             textBox4.TabIndex = 79;
             // 
             // label3
@@ -266,7 +266,7 @@
             label3.Location = new Point(13, 19);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(214, 37);
+            label3.Size = new Size(247, 37);
             label3.TabIndex = 14;
             label3.Text = "Manage Account";
             label3.TextAlign = ContentAlignment.MiddleRight;
@@ -301,7 +301,7 @@
             // 
             // ManageAccountForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(982, 653);

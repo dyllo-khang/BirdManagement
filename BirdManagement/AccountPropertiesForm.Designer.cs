@@ -50,7 +50,7 @@
             label2.ForeColor = Color.Black;
             label2.Location = new Point(24, 172);
             label2.Name = "label2";
-            label2.Size = new Size(49, 20);
+            label2.Size = new Size(58, 21);
             label2.TabIndex = 69;
             label2.Text = "Role :";
             // 
@@ -58,7 +58,7 @@
             // 
             textBox4.Location = new Point(152, 97);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(493, 25);
+            textBox4.Size = new Size(493, 30);
             textBox4.TabIndex = 68;
             // 
             // label8
@@ -67,7 +67,7 @@
             label8.ForeColor = Color.Black;
             label8.Location = new Point(24, 106);
             label8.Name = "label8";
-            label8.Size = new Size(81, 20);
+            label8.Size = new Size(98, 21);
             label8.TabIndex = 67;
             label8.Text = "Fullname :";
             // 
@@ -77,7 +77,7 @@
             label1.ForeColor = Color.Black;
             label1.Location = new Point(24, 239);
             label1.Name = "label1";
-            label1.Size = new Size(81, 20);
+            label1.Size = new Size(99, 21);
             label1.TabIndex = 71;
             label1.Text = "Activate :";
             // 
@@ -86,7 +86,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(152, 164);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(493, 27);
+            comboBox1.Size = new Size(493, 29);
             comboBox1.TabIndex = 72;
             // 
             // comboBox2
@@ -94,7 +94,7 @@
             comboBox2.FormattingEnabled = true;
             comboBox2.Location = new Point(152, 231);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(493, 27);
+            comboBox2.Size = new Size(493, 29);
             comboBox2.TabIndex = 73;
             // 
             // button3
@@ -151,14 +151,14 @@
             label3.ImageAlign = ContentAlignment.MiddleLeft;
             label3.Location = new Point(12, 9);
             label3.Name = "label3";
-            label3.Size = new Size(229, 43);
+            label3.Size = new Size(271, 43);
             label3.TabIndex = 0;
             label3.Text = "Account Properties";
             label3.TextAlign = ContentAlignment.MiddleRight;
             // 
             // AccountPropertiesForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(682, 362);

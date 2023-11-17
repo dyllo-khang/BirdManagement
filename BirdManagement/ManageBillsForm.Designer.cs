@@ -37,9 +37,9 @@
             panel1 = new Panel();
             button1 = new Button();
             label3 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dtpFrom = new DateTimePicker();
             label4 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dtpTo = new DateTimePicker();
             btnSearch = new Button();
             label5 = new Label();
             lbTotalPrice = new Label();
@@ -58,13 +58,12 @@
             label9.Location = new Point(633, 9);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
-            label9.Size = new Size(176, 23);
+            label9.Size = new Size(213, 27);
             label9.TabIndex = 50;
             label9.Text = "View Bill Details";
             // 
             // dgvBillDetail
             // 
-            dgvBillDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBillDetail.BackgroundColor = Color.White;
             dgvBillDetail.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBillDetail.Location = new Point(475, 52);
@@ -84,7 +83,7 @@
             label1.Location = new Point(133, 9);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(190, 23);
+            label1.Size = new Size(229, 27);
             label1.TabIndex = 48;
             label1.Text = "Bills Management";
             // 
@@ -111,7 +110,7 @@
             label2.Location = new Point(13, 19);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(164, 37);
+            label2.Size = new Size(188, 37);
             label2.TabIndex = 14;
             label2.Text = "Manage Bill";
             label2.TextAlign = ContentAlignment.MiddleRight;
@@ -149,32 +148,32 @@
             label3.AutoSize = true;
             label3.Location = new Point(31, 543);
             label3.Name = "label3";
-            label3.Size = new Size(146, 20);
+            label3.Size = new Size(182, 22);
             label3.TabIndex = 52;
             label3.Text = "Filter By Date: From";
             // 
-            // dateTimePicker1
+            // dtpFrom
             // 
-            dateTimePicker1.Location = new Point(219, 535);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 26);
-            dateTimePicker1.TabIndex = 53;
+            dtpFrom.Location = new Point(219, 535);
+            dtpFrom.Name = "dtpFrom";
+            dtpFrom.Size = new Size(200, 30);
+            dtpFrom.TabIndex = 53;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(423, 543);
             label4.Name = "label4";
-            label4.Size = new Size(24, 20);
+            label4.Size = new Size(30, 22);
             label4.TabIndex = 54;
             label4.Text = "To";
             // 
-            // dateTimePicker2
+            // dtpTo
             // 
-            dateTimePicker2.Location = new Point(465, 535);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(200, 26);
-            dateTimePicker2.TabIndex = 55;
+            dtpTo.Location = new Point(465, 535);
+            dtpTo.Name = "dtpTo";
+            dtpTo.Size = new Size(200, 30);
+            dtpTo.TabIndex = 55;
             // 
             // btnSearch
             // 
@@ -188,13 +187,14 @@
             btnSearch.TabIndex = 56;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Location = new Point(174, 386);
             label5.Name = "label5";
-            label5.Size = new Size(87, 20);
+            label5.Size = new Size(107, 22);
             label5.TabIndex = 57;
             label5.Text = "Total Price:";
             // 
@@ -203,7 +203,7 @@
             lbTotalPrice.AutoSize = true;
             lbTotalPrice.Location = new Point(310, 386);
             lbTotalPrice.Name = "lbTotalPrice";
-            lbTotalPrice.Size = new Size(0, 20);
+            lbTotalPrice.Size = new Size(0, 22);
             lbTotalPrice.TabIndex = 58;
             // 
             // lbTotalProfit
@@ -211,7 +211,7 @@
             lbTotalProfit.AutoSize = true;
             lbTotalProfit.Location = new Point(610, 386);
             lbTotalProfit.Name = "lbTotalProfit";
-            lbTotalProfit.Size = new Size(0, 20);
+            lbTotalProfit.Size = new Size(0, 22);
             lbTotalProfit.TabIndex = 62;
             // 
             // label11
@@ -219,13 +219,13 @@
             label11.AutoSize = true;
             label11.Location = new Point(475, 386);
             label11.Name = "label11";
-            label11.Size = new Size(54, 20);
+            label11.Size = new Size(65, 22);
             label11.TabIndex = 61;
             label11.Text = "Profit :";
             // 
             // ManageBillsForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(984, 661);
@@ -234,9 +234,9 @@
             Controls.Add(lbTotalPrice);
             Controls.Add(label5);
             Controls.Add(btnSearch);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dtpTo);
             Controls.Add(label4);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dtpFrom);
             Controls.Add(label3);
             Controls.Add(panel1);
             Controls.Add(label9);
@@ -267,9 +267,9 @@
         private Panel panel1;
         private Button button1;
         private Label label3;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dtpFrom;
         private Label label4;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dtpTo;
         private Button btnSearch;
         private Label label5;
         private Label lbTotalPrice;

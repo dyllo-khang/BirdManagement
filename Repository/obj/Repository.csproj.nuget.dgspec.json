@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN211\\BirdManagement\\Repository\\Repository.csproj": {}
+    "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Repository\\Repository.csproj": {}
   },
   "projects": {
-    "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\Duy\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN211\\BirdManagement\\BusinessObject\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Duy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -77,21 +81,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj",
         "projectName": "ManagementDAO",
-        "projectPath": "D:\\PRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj",
-        "packagesPath": "C:\\Users\\Duy\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN211\\BirdManagement\\ManagementDAO\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Duy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -105,8 +113,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -142,21 +150,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\PRN211\\BirdManagement\\Repository\\Repository.csproj": {
+    "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN211\\BirdManagement\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\PRN211\\BirdManagement\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\Duy\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN211\\BirdManagement\\Repository\\obj\\",
+        "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Repository\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Duy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,11 +182,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "D:\\PRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
+              "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
               },
-              "D:\\PRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj": {
-                "projectPath": "D:\\PRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj"
+              "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj": {
+                "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\ManagementDAO\\ManagementDAO.csproj"
               }
             }
           }
@@ -204,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

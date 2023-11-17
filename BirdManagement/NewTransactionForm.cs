@@ -148,7 +148,7 @@ namespace BirdManagement
                 decimal discount = udDis.Value;
                 Bill bill = new Bill();
                 bill.CustomerId = this.id;
-                bill.DateCheckOut = DateTime.Parse(DateTime.Now.ToShortDateString());
+                bill.DateCheckOut = DateTime.Now;
                 bill.Total = float.Parse(lbTotal.Text);
                 bill.Status = 1;
                 bill.Checked = 1;

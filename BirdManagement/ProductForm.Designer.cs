@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             panel1 = new Panel();
-            button1 = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             dgvProduct = new DataGridView();
@@ -60,7 +59,6 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 70, 160);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label2);
             panel1.Dock = DockStyle.Bottom;
@@ -68,21 +66,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1009, 56);
             panel1.TabIndex = 2;
-            // 
-            // button1
-            // 
-            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(1960, -25);
-            button1.Name = "button1";
-            button1.Size = new Size(121, 45);
-            button1.TabIndex = 16;
-            button1.Text = "Logout";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -100,7 +83,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(68, 19);
             label2.Name = "label2";
-            label2.Size = new Size(167, 28);
+            label2.Size = new Size(214, 28);
             label2.TabIndex = 14;
             label2.Text = "Manage Product";
             // 
@@ -125,7 +108,7 @@
             label1.ForeColor = Color.FromArgb(0, 70, 160);
             label1.Location = new Point(390, 9);
             label1.Name = "label1";
-            label1.Size = new Size(189, 23);
+            label1.Size = new Size(238, 30);
             label1.TabIndex = 4;
             label1.Text = "Bird Management";
             // 
@@ -134,7 +117,7 @@
             label3.AutoSize = true;
             label3.Location = new Point(29, 360);
             label3.Name = "label3";
-            label3.Size = new Size(33, 20);
+            label3.Size = new Size(39, 22);
             label3.TabIndex = 5;
             label3.Text = "ID :";
             // 
@@ -143,7 +126,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(29, 416);
             label4.Name = "label4";
-            label4.Size = new Size(92, 20);
+            label4.Size = new Size(114, 22);
             label4.TabIndex = 6;
             label4.Text = "Bird Name :";
             // 
@@ -152,7 +135,7 @@
             label5.AutoSize = true;
             label5.Location = new Point(29, 468);
             label5.Name = "label5";
-            label5.Size = new Size(79, 20);
+            label5.Size = new Size(102, 22);
             label5.TabIndex = 7;
             label5.Text = "Quantity :";
             // 
@@ -161,7 +144,7 @@
             label6.AutoSize = true;
             label6.Location = new Point(488, 360);
             label6.Name = "label6";
-            label6.Size = new Size(89, 20);
+            label6.Size = new Size(108, 22);
             label6.TabIndex = 8;
             label6.Text = "Saleprice  :";
             // 
@@ -170,7 +153,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(488, 416);
             label7.Name = "label7";
-            label7.Size = new Size(96, 20);
+            label7.Size = new Size(118, 22);
             label7.TabIndex = 9;
             label7.Text = "Input Price :";
             // 
@@ -179,53 +162,53 @@
             label8.AutoSize = true;
             label8.Location = new Point(488, 468);
             label8.Name = "label8";
-            label8.Size = new Size(91, 20);
+            label8.Size = new Size(114, 22);
             label8.TabIndex = 10;
             label8.Text = "Category  :";
             // 
             // txtID
             // 
-            txtID.Location = new Point(124, 354);
+            txtID.Location = new Point(139, 354);
             txtID.Name = "txtID";
-            txtID.Size = new Size(332, 26);
+            txtID.Size = new Size(317, 30);
             txtID.TabIndex = 11;
             // 
             // txtName
             // 
-            txtName.Location = new Point(124, 410);
+            txtName.Location = new Point(139, 410);
             txtName.Name = "txtName";
-            txtName.Size = new Size(332, 26);
+            txtName.Size = new Size(317, 30);
             txtName.TabIndex = 12;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(590, 354);
+            txtPrice.Location = new Point(612, 354);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(340, 26);
+            txtPrice.Size = new Size(328, 30);
             txtPrice.TabIndex = 13;
             // 
             // txtImPrice
             // 
-            txtImPrice.Location = new Point(590, 410);
+            txtImPrice.Location = new Point(612, 410);
             txtImPrice.Name = "txtImPrice";
-            txtImPrice.Size = new Size(340, 26);
+            txtImPrice.Size = new Size(328, 30);
             txtImPrice.TabIndex = 14;
             // 
             // udQuantity
             // 
-            udQuantity.Location = new Point(124, 462);
+            udQuantity.Location = new Point(139, 460);
             udQuantity.Margin = new Padding(13, 16, 13, 16);
             udQuantity.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             udQuantity.Name = "udQuantity";
-            udQuantity.Size = new Size(118, 26);
+            udQuantity.Size = new Size(118, 30);
             udQuantity.TabIndex = 15;
             // 
             // cbxType
             // 
             cbxType.FormattingEnabled = true;
-            cbxType.Location = new Point(590, 460);
+            cbxType.Location = new Point(612, 460);
             cbxType.Name = "cbxType";
-            cbxType.Size = new Size(340, 28);
+            cbxType.Size = new Size(328, 30);
             cbxType.TabIndex = 16;
             // 
             // btnAdd
@@ -284,7 +267,7 @@
             // 
             // ProductForm
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(1009, 667);
@@ -324,7 +307,6 @@
         #endregion
 
         private Panel panel1;
-        private Button button1;
         private PictureBox pictureBox1;
         private Label label2;
         private DataGridView dgvProduct;
