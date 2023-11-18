@@ -11,5 +11,6 @@ namespace Repository
     {
         List<AccountDetail> GetAll();
         bool AddAccountDetail(AccountDetail accountDetail);
+        bool UpdateAccoutDetail(AccountDetail accountDetail);
     }
 }

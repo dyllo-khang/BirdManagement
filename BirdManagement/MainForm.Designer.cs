@@ -31,7 +31,6 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panelSlide = new Panel();
-            btnChangePassword = new Button();
             btnLogout = new Button();
             btnOPreview = new Button();
             btnBPreview = new Button();
@@ -52,6 +51,8 @@
             pictureBox3 = new PictureBox();
             lblDashboard = new Label();
             lblTimer = new Label();
+            btnChangePassword = new Button();
+            btnUpdateInfo = new Button();
             panelSlide.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -65,6 +66,7 @@
             // 
             // panelSlide
             // 
+            panelSlide.Controls.Add(btnUpdateInfo);
             panelSlide.Controls.Add(btnChangePassword);
             panelSlide.Controls.Add(btnLogout);
             panelSlide.Controls.Add(btnOPreview);
@@ -77,26 +79,6 @@
             panelSlide.Name = "panelSlide";
             panelSlide.Size = new Size(200, 700);
             panelSlide.TabIndex = 6;
-            // 
-            // btnChangePassword
-            // 
-            btnChangePassword.Dock = DockStyle.Top;
-            btnChangePassword.FlatAppearance.BorderSize = 0;
-            btnChangePassword.FlatStyle = FlatStyle.Flat;
-            btnChangePassword.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChangePassword.ForeColor = Color.White;
-            btnChangePassword.Image = (Image)resources.GetObject("btnChangePassword.Image");
-            btnChangePassword.ImageAlign = ContentAlignment.MiddleLeft;
-            btnChangePassword.Location = new Point(0, 380);
-            btnChangePassword.Name = "btnChangePassword";
-            btnChangePassword.Padding = new Padding(5, 0, 0, 0);
-            btnChangePassword.Size = new Size(200, 55);
-            btnChangePassword.TabIndex = 10;
-            btnChangePassword.Text = "Change Password";
-            btnChangePassword.TextAlign = ContentAlignment.MiddleLeft;
-            btnChangePassword.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnChangePassword.UseVisualStyleBackColor = true;
-            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // btnLogout
             // 
@@ -336,6 +318,46 @@
             lblTimer.Text = "00:00:00";
             lblTimer.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnChangePassword
+            // 
+            btnChangePassword.Dock = DockStyle.Top;
+            btnChangePassword.FlatAppearance.BorderSize = 0;
+            btnChangePassword.FlatStyle = FlatStyle.Flat;
+            btnChangePassword.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangePassword.ForeColor = Color.White;
+            btnChangePassword.Image = (Image)resources.GetObject("btnChangePassword.Image");
+            btnChangePassword.ImageAlign = ContentAlignment.MiddleLeft;
+            btnChangePassword.Location = new Point(0, 380);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Padding = new Padding(5, 0, 0, 0);
+            btnChangePassword.Size = new Size(200, 55);
+            btnChangePassword.TabIndex = 10;
+            btnChangePassword.Text = "Change Password";
+            btnChangePassword.TextAlign = ContentAlignment.MiddleLeft;
+            btnChangePassword.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnChangePassword.UseVisualStyleBackColor = true;
+            btnChangePassword.Click += btnChangePassword_Click;
+            // 
+            // btnUpdateInfo
+            // 
+            btnUpdateInfo.Dock = DockStyle.Top;
+            btnUpdateInfo.FlatAppearance.BorderSize = 0;
+            btnUpdateInfo.FlatStyle = FlatStyle.Flat;
+            btnUpdateInfo.Font = new Font("Century Gothic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdateInfo.ForeColor = Color.White;
+            btnUpdateInfo.Image = (Image)resources.GetObject("btnUpdateInfo.Image");
+            btnUpdateInfo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUpdateInfo.Location = new Point(0, 435);
+            btnUpdateInfo.Name = "btnUpdateInfo";
+            btnUpdateInfo.Padding = new Padding(5, 0, 0, 0);
+            btnUpdateInfo.Size = new Size(200, 55);
+            btnUpdateInfo.TabIndex = 11;
+            btnUpdateInfo.Text = "Update Info";
+            btnUpdateInfo.TextAlign = ContentAlignment.MiddleLeft;
+            btnUpdateInfo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUpdateInfo.UseVisualStyleBackColor = true;
+            btnUpdateInfo.Click += btnUpdateInfo_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(11F, 21F);
@@ -384,7 +406,6 @@
         private Panel panel2;
         private Label lbName;
         private Panel panelMain;
-        private Button btnChangePassword;
         private PictureBox pictureBox2;
         private PictureBox picClose;
         private System.Windows.Forms.Timer timer1;
@@ -392,5 +413,7 @@
         private PictureBox pictureBox3;
         private Label lblDashboard;
         private Label lblTimer;
+        private Button btnUpdateInfo;
+        private Button btnChangePassword;
     }
 }

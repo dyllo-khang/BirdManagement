@@ -146,7 +146,6 @@
             Controls.Add(lbName);
             Controls.Add(pictureBox1);
             Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             Name = "ChangePasswordForm";
             StartPosition = FormStartPosition.CenterScreen;

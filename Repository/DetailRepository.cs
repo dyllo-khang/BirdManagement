@@ -13,5 +13,8 @@ namespace Repository
         public bool AddAccountDetail(AccountDetail accountDetail) => DetailDAO.Instance.AddAccountDetail(accountDetail);
         public List<AccountDetail> GetAll() => DetailDAO.Instance.GetAll();
 
+        public bool UpdateAccoutDetail(AccountDetail accountDetail) => DetailDAO.Instance.UpdateAccoutDetail(accountDetail);
+
+
     }
 }

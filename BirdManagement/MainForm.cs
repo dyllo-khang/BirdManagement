@@ -106,5 +106,11 @@ namespace BirdManagement
         {
             OpenForm(new NewTransactionForm(this.id));
         }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            OpenForm(new UpdateInfoForm(this.id));
+            slide(btnUpdateInfo);
+        }
     }
 }

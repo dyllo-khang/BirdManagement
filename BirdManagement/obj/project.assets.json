@@ -2439,11 +2439,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BirdManagement\\BirdManagement.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\BirdManagement\\BirdManagement.csproj",
       "projectName": "BirdManagement",
-      "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BirdManagement\\BirdManagement.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\BirdManagement\\BirdManagement.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BirdManagement\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\BirdManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2464,11 +2464,11 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
+            "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\BusinessObject\\BusinessObject.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\BusinessObject\\BusinessObject.csproj"
             },
-            "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\BirdManagement\\Service\\Service.csproj"
+            "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\ADMIN\\Documents\\ProjectPRN211\\Project\\BirdManagement\\Service\\Service.csproj"
             }
           }
         }

@@ -183,7 +183,6 @@ namespace BirdManagement
                 if (addBill && addBillDetail)
                 {
                     MessageBox.Show("Purchase succesfully! Thank you...", "Notification", MessageBoxButtons.OK);
-                    btnAddCus.Enabled = true;
                 }
                 else
                 {
@@ -217,7 +216,6 @@ namespace BirdManagement
             {
                 txtNameCus.Text = existingAcc.Name;
                 searchID = existingAcc.Id;
-                btnAddCus.Enabled = false;
             }
             else
             {
@@ -225,10 +223,6 @@ namespace BirdManagement
             }
         }
 
-        private void btnAddCus_Click(object sender, EventArgs e)
-        {
-            Account account = new Account();
-            account.
-        }
+      
     }
 }

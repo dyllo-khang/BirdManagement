@@ -109,7 +109,7 @@ namespace Bird_Farm_Shop
         {
             hideSubmenu();
             slide(btnManageBills);
-            if(role == 1)
+            if (role == 1)
             {
                 OpenForm(new ManageBillsForm());
             }
@@ -180,6 +180,13 @@ namespace Bird_Farm_Shop
             hideSubmenu();
             slide(btnShopping);
             OpenForm(new OfflineShoppingForm(this.id));
+        }
+
+        private void btnUpdateInfo_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            OpenForm(new UpdateInfoForm(this.id));
+            
         }
     }
 }

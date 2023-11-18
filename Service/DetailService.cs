@@ -19,5 +19,8 @@ namespace Service
         public bool AddAccountDetail(AccountDetail accountDetail) => detailRepository.AddAccountDetail(accountDetail);
 
         public List<AccountDetail> GetAll() => detailRepository.GetAll();
+
+        public bool UpdateAccoutDetail(AccountDetail accountDetail) => detailRepository.UpdateAccoutDetail(accountDetail);
+
     }
 }

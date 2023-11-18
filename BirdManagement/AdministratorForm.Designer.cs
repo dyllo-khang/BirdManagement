@@ -49,6 +49,7 @@
             lbTitle = new Label();
             panelMain = new Panel();
             panel2 = new Panel();
+            btnUpdateInfo = new Button();
             panelSlide.SuspendLayout();
             panelSubUser.SuspendLayout();
             panel1.SuspendLayout();
@@ -80,7 +81,7 @@
             btnShopping.FlatAppearance.BorderSize = 0;
             btnShopping.FlatStyle = FlatStyle.Flat;
             btnShopping.ForeColor = Color.White;
-            btnShopping.Location = new Point(0, 480);
+            btnShopping.Location = new Point(0, 530);
             btnShopping.Name = "btnShopping";
             btnShopping.Padding = new Padding(5, 0, 0, 0);
             btnShopping.Size = new Size(200, 50);
@@ -93,12 +94,13 @@
             // panelSubUser
             // 
             panelSubUser.BackColor = Color.FromArgb(0, 70, 200);
+            panelSubUser.Controls.Add(btnUpdateInfo);
             panelSubUser.Controls.Add(btnChangePass);
             panelSubUser.Controls.Add(btnManageAcc);
             panelSubUser.Dock = DockStyle.Top;
             panelSubUser.Location = new Point(0, 380);
             panelSubUser.Name = "panelSubUser";
-            panelSubUser.Size = new Size(200, 100);
+            panelSubUser.Size = new Size(200, 150);
             panelSubUser.TabIndex = 8;
             // 
             // btnChangePass
@@ -230,7 +232,7 @@
             lbName.ForeColor = Color.White;
             lbName.Location = new Point(50, 122);
             lbName.Name = "lbName";
-            lbName.Size = new Size(83, 20);
+            lbName.Size = new Size(98, 21);
             lbName.TabIndex = 2;
             lbName.Text = "Username";
             // 
@@ -240,7 +242,7 @@
             lbRole.ForeColor = Color.White;
             lbRole.Location = new Point(37, 143);
             lbRole.Name = "lbRole";
-            lbRole.Size = new Size(104, 20);
+            lbRole.Size = new Size(126, 21);
             lbRole.TabIndex = 1;
             lbRole.Text = "Administrator";
             // 
@@ -308,9 +310,25 @@
             panel2.Size = new Size(8, 700);
             panel2.TabIndex = 5;
             // 
+            // btnUpdateInfo
+            // 
+            btnUpdateInfo.Dock = DockStyle.Top;
+            btnUpdateInfo.FlatAppearance.BorderSize = 0;
+            btnUpdateInfo.FlatStyle = FlatStyle.Flat;
+            btnUpdateInfo.ForeColor = Color.White;
+            btnUpdateInfo.Location = new Point(0, 100);
+            btnUpdateInfo.Name = "btnUpdateInfo";
+            btnUpdateInfo.Padding = new Padding(20, 0, 0, 0);
+            btnUpdateInfo.Size = new Size(200, 50);
+            btnUpdateInfo.TabIndex = 11;
+            btnUpdateInfo.Text = "Update Info";
+            btnUpdateInfo.TextAlign = ContentAlignment.MiddleLeft;
+            btnUpdateInfo.UseVisualStyleBackColor = true;
+            btnUpdateInfo.Click += btnUpdateInfo_Click;
+            // 
             // AdministratorForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 70, 160);
             ClientSize = new Size(1182, 700);
@@ -359,5 +377,6 @@
         private Panel panelSlide1;
         private Panel panel2;
         private PictureBox picClose;
+        private Button btnUpdateInfo;
     }
 }
