@@ -62,7 +62,7 @@ namespace Bird_Farm_Shop
                         userForm.Show();
                         this.Hide();
                     }
-                    if(account.Role == 3)
+                    if (account.Role == 3)
                     {
                         string name = _detailservice.GetAll().SingleOrDefault(d => d.Id == account.Id).Name;
                         MessageBox.Show($"Wellcome to {name}", "Access Granted", MessageBoxButtons.OK);

@@ -53,7 +53,7 @@
             // 
             picClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             picClose.Image = (Image)resources.GetObject("picClose.Image");
-            picClose.Location = new Point(915, 0);
+            picClose.Location = new Point(924, 0);
             picClose.Name = "picClose";
             picClose.Size = new Size(30, 29);
             picClose.TabIndex = 12;
@@ -66,7 +66,7 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(70, 9);
             label1.Name = "label1";
-            label1.Size = new Size(301, 50);
+            label1.Size = new Size(322, 59);
             label1.TabIndex = 0;
             label1.Text = "Bird Farm Shop";
             // 
@@ -79,7 +79,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(950, 70);
+            panel1.Size = new Size(959, 84);
             panel1.TabIndex = 7;
             // 
             // pictureBox1
@@ -130,7 +130,7 @@
             label2.Font = new Font("Century Schoolbook", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(296, 221);
             label2.Name = "label2";
-            label2.Size = new Size(276, 32);
+            label2.Size = new Size(529, 62);
             label2.TabIndex = 11;
             label2.Text = "Please Login First";
             // 
@@ -200,10 +200,10 @@
             // Login
             // 
             AcceptButton = btnLogin;
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(17F, 36F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(950, 650);
+            ClientSize = new Size(959, 652);
             Controls.Add(lblRegister);
             Controls.Add(label5);
             Controls.Add(btnCancel);

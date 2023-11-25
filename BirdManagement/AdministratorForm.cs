@@ -86,10 +86,7 @@ namespace Bird_Farm_Shop
             panelSlide1.Height = btn.Height;
             panelSlide1.Top = btn.Top;
         }
-        public void slide1(Panel panel)
-        {
 
-        }
         #endregion panelSlide
         private void btnProduct_Click(object sender, EventArgs e)
         {
